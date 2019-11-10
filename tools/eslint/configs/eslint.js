@@ -21,6 +21,7 @@ module.exports = {
   ],
   settings: { 'import/resolver': { typescript: {} } },
   rules: {
+    'prettier/prettier': 'error',
     '@geeks-log/ban-characters': [
       'error',
       {
