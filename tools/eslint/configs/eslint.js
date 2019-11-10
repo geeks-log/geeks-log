@@ -46,6 +46,7 @@ module.exports = {
     'import/no-cycle': ['error', { maxDepth: Infinity }],
     eqeqeq: ['error', 'always', { null: 'ignore' }],
     'import/no-duplicates': 'error',
+    '@typescript-eslint/no-inferrable-types': 'off',
   },
 };
 

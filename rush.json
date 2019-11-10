@@ -25,6 +25,12 @@
   "hotfixChangeEnabled": false,
   "projects": [
     {
+      "packageName": "@geeks-log/ui-devkit",
+      "projectFolder": "libraries/ui-devkit",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@geeks-log/ui",
       "projectFolder": "libraries/ui",
       "reviewCategory": "libraries",
