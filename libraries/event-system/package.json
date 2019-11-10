@@ -4,7 +4,7 @@
   "scripts": {
     "build": "rm -rf dist/ && tsc -p tsconfig.json",
     "test": "tsc -d --noEmit && npm run lint && jest",
-    "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.ts'"
+    "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
