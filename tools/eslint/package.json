@@ -1,0 +1,29 @@
+{
+  "name": "@geeks-log/eslint",
+  "version": "0.0.0",
+  "bin": {
+    "geeks-log-eslint": "bin/eslint"
+  },
+  "files": [
+    "bin/",
+    "configs/"
+  ],
+  "scripts": {
+    "build": "",
+    "test": "bin/eslint -c .eslintrc.js 'test/**/*.{js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
+    "@geeks-log/eslint-plugin": "0.0.0",
+    "@typescript-eslint/eslint-plugin": "~2.6.1",
+    "@typescript-eslint/parser": "~2.6.1",
+    "eslint": "~6.6.0",
+    "eslint-config-prettier": "~6.5.0",
+    "eslint-import-resolver-typescript": "~2.0.0",
+    "eslint-plugin-import": "~2.18.2",
+    "eslint-plugin-prettier": "~3.1.1",
+    "prettier": "~1.19.1"
+  },
+  "devDependencies": {
+    "typescript": "~3.7.2"
+  }
+}

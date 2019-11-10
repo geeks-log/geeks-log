@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "../../../../dist",
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es2017"
+    ],
+    "typeRoots": [
+      "node_modules/@types/"
+    ]
+  },
+  "include": [
+    "../../../../src/**/*.ts"
+  ],
+  "exclude": [
+    "../../../../node_modules",
+    "../../../../dist"
+  ]
+}

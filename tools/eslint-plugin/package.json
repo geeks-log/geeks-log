@@ -1,0 +1,16 @@
+{
+  "name": "@geeks-log/eslint-plugin",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "build": "",
+    "test": "node test/index.test.js"
+  },
+  "devDependencies": {
+    "eslint": "~6.6.0",
+    "babel-eslint": "~10.0.3"
+  }
+}

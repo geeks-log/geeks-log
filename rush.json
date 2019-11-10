@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.11.4",
+  "pnpmVersion": "2.15.1",
+  "pnpmOptions": {
+    "strictPeerDependencies": true
+  },
+  "nodeSupportedVersionRange": ">=10.13.0 <11.0.0",
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 2,
+  "gitPolicy": {
+    "versionBumpCommitMessage": "Applying package updates [skip ci]"
+  },
+  "repository": {
+    "url": "https://github.com/seokju-na/rush-example.git"
+  },
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "variants": [],
+  "telemetryEnabled": false,
+  "hotfixChangeEnabled": false,
+  "projects": [
+    {
+      "packageName": "@geeks-log/ui",
+      "projectFolder": "libraries/ui",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/typescript",
+      "projectFolder": "tools/typescript",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/eslint-plugin",
+      "projectFolder": "tools/eslint-plugin",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/eslint",
+      "projectFolder": "tools/eslint",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    }
+  ]
+}

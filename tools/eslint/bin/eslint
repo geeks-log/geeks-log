@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+const { execFileSync } = require('child_process');
+const path = require('path');
+
+execFileSync(
+  path.resolve(__dirname, '../node_modules/.bin/', 'eslint'),
+  [...process.argv.slice(2)],
+  {
+    stdio: 'inherit',
+  },
+);
