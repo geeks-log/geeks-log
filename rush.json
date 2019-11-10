@@ -33,19 +33,31 @@
     {
       "packageName": "@geeks-log/typescript",
       "projectFolder": "tools/typescript",
-      "reviewCategory": "libraries",
+      "reviewCategory": "tools",
       "shouldPublish": false
     },
     {
       "packageName": "@geeks-log/eslint-plugin",
       "projectFolder": "tools/eslint-plugin",
-      "reviewCategory": "libraries",
+      "reviewCategory": "tools",
       "shouldPublish": false
     },
     {
       "packageName": "@geeks-log/eslint",
       "projectFolder": "tools/eslint",
-      "reviewCategory": "libraries",
+      "reviewCategory": "tools",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/babel",
+      "projectFolder": "tools/babel",
+      "reviewCategory": "tools",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/typings",
+      "projectFolder": "tools/typings",
+      "reviewCategory": "tools",
       "shouldPublish": false
     }
   ]
