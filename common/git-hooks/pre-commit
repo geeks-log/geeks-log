@@ -1,6 +1,6 @@
 #!/bin/sh
 
-COMMAND=common/temp/node_modules/.bin/pretty-quick --staged
+COMMAND=common/temp/node_modules/.bin/pretty-quick
 
 echo --------------------------------------------
 echo Starting Git hook: pre-commit
