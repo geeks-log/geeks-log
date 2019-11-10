@@ -1,5 +1,5 @@
 {
-  "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig",
+  "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig-web.json",
   "compilerOptions": {
     "baseUrl": "./",
     "sourceRoot": "src/"
