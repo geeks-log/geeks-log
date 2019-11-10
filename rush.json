@@ -12,7 +12,7 @@
     "versionBumpCommitMessage": "Applying package updates [skip ci]"
   },
   "repository": {
-    "url": "https://github.com/seokju-na/rush-example.git"
+    "url": "https://github.com/seokju-na/geeks-log.git"
   },
   "eventHooks": {
     "preRushInstall": [],
