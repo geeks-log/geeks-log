@@ -1,0 +1,16 @@
+#!/bin/sh
+
+COMMAND=common/temp/node_modules/.bin/pretty-quick --staged
+
+echo --------------------------------------------
+echo Starting Git hook: pre-commit
+
+if [ -f $COMMAND ]; then
+  echo Invoking $COMMAND
+  $COMMAND
+else
+  echo Command not installed: $COMMAND
+fi
+
+echo Finished Git hook: pre-commit
+echo --------------------------------------------
