@@ -37,6 +37,12 @@
       "shouldPublish": false
     },
     {
+      "packageName": "@geeks-log/event-system",
+      "projectFolder": "libraries/event-system",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@geeks-log/typescript",
       "projectFolder": "tools/typescript",
       "reviewCategory": "tools",

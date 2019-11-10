@@ -1,0 +1,15 @@
+{
+  "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "noImplicitAny": false,
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "include": [
+    "src/",
+    "test/"
+  ]
+}

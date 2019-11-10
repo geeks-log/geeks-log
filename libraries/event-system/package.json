@@ -1,0 +1,40 @@
+{
+  "name": "@geeks-log/event-system",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "rm -rf dist/ && tsc -p tsconfig.json",
+    "test": "tsc -d --noEmit && npm run lint && jest",
+    "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.ts'"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.6.8",
+    "@geeks-log/eslint": "0.0.0",
+    "@geeks-log/typescript": "0.0.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "~3.7.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "test/",
+    "testRegex": ".spec.ts$",
+    "moduleDirectories": [
+      "node_modules/",
+      "src/"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "globals": {
+      "ts-jest": {
+        "packageJson": "package.json",
+        "tsConfig": "tsconfig.spec.json"
+      }
+    }
+  }
+}
