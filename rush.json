@@ -25,14 +25,26 @@
   "hotfixChangeEnabled": false,
   "projects": [
     {
-      "packageName": "@geeks-log/ui-devkit",
-      "projectFolder": "libraries/ui-devkit",
+      "packageName": "@geeks-log/backend",
+      "projectFolder": "services/backend",
+      "reviewCategory": "production",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/cdk",
+      "projectFolder": "libraries/cdk",
       "reviewCategory": "libraries",
       "shouldPublish": false
     },
     {
       "packageName": "@geeks-log/ui",
       "projectFolder": "libraries/ui",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/note-diff",
+      "projectFolder": "libraries/note-diff",
       "reviewCategory": "libraries",
       "shouldPublish": false
     },

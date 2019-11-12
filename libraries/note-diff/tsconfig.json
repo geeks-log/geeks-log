@@ -1,0 +1,8 @@
+{
+  "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "strict": false,
+    "baseUrl": "./"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "@geeks-log/ui-devkit",
+  "name": "@geeks-log/cdk",
   "version": "0.0.0",
   "scripts": {
     "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.{js,jsx,ts,tsx}'",

@@ -1,19 +1,24 @@
 {
-  "name": "@geeks-log/event-system",
+  "name": "@geeks-log/note-diff",
   "version": "0.0.0",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.json && tsc -p tsconfig.esm.json",
-    "test": "tsc -d --noEmit && npm run lint && jest",
-    "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'"
+    "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'",
+    "test": "tsc -d --noEmit && npm run lint && jest"
+  },
+  "dependencies": {
+    "diff_match_patch": "^0.1.1",
+    "lodash.isequal": "^4.5.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.6.8",
     "@geeks-log/eslint": "0.0.0",
     "@geeks-log/typescript": "0.0.0",
+    "@types/node": "^10.17.5",
+    "@types/jest": "^24.0.22",
+    "@types/lodash.isequal": "^4.5.5",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
     "typescript": "~3.7.2"
