@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "build": "",
-    "test": "bin/eslint -c .eslintrc.js 'test/**/*.{js,jsx,ts,tsx}'"
+    "test": "bin/eslint -c .eslintrc.js 'test/**/*.{js,jsx,ts,tsx}'",
+    "ci": "npm run test"
   },
   "dependencies": {
     "@geeks-log/eslint-plugin": "0.0.0",

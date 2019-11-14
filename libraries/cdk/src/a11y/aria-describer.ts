@@ -5,11 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-
+import { useEffect, useRef, RefObject } from 'react';
 import { getPlatform } from '../platform';
-
-/** IDs are deliminated by an empty space, as per the spec. */
-const ID_DELIMINATOR = ' ';
+import { addAriaReferencedId, getAriaReferenceIds, removeAriaReferencedId } from './aria-reference';
 
 /** ID used for the body container where all messages are appended. */
 const MESSAGES_CONTAINER_ID = 'cdk-describedby-message-container';
@@ -19,41 +17,6 @@ const CDK_DESCRIBEDBY_ID_PREFIX = 'cdk-describedby-message';
 
 /** Attribute given to each host element that is described by a message element. */
 const CDK_DESCRIBEDBY_HOST_ATTRIBUTE = 'cdk-describedby-host';
-
-/**
- * Adds the given ID to the specified ARIA attribute on an element.
- * Used for attributes such as aria-labelledby, aria-owns, etc.
- */
-function addAriaReferencedId(el: Element, attr: string, id: string) {
-  const ids = getAriaReferenceIds(el, attr);
-
-  if (ids.some(existingId => existingId.trim() === id.trim())) {
-    return;
-  }
-  ids.push(id.trim());
-
-  el.setAttribute(attr, ids.join(ID_DELIMINATOR));
-}
-
-/**
- * Gets the list of IDs referenced by the given ARIA attribute on an element.
- * Used for attributes such as aria-labelledby, aria-owns, etc.
- */
-function getAriaReferenceIds(el: Element, attr: string): string[] {
-  // Get string array of all individual ids (whitespace deliminated) in the attribute value
-  return (el.getAttribute(attr) || '').match(/\S+/g) || [];
-}
-
-/**
- * Removes the given ID from the specified ARIA attribute on an element.
- * Used for attributes such as aria-labelledby, aria-owns, etc.
- */
-function removeAriaReferencedId(el: Element, attr: string, id: string) {
-  const ids = getAriaReferenceIds(el, attr);
-  const filteredIds = ids.filter(val => val !== id.trim());
-
-  el.setAttribute(attr, filteredIds.join(ID_DELIMINATOR));
-}
 
 /**
  * Interface used to register message elements and keep a count of how many registrations have
@@ -75,6 +38,39 @@ const messageRegistry = new Map<string | HTMLElement, RegisteredMessage>();
 
 /** Container for all registered messages. */
 let messagesContainer: HTMLElement | null = null;
+
+export function useAriaDescriber<
+  T extends HTMLElement = HTMLElement,
+  M extends HTMLElement = HTMLElement
+>(message: string | RefObject<M>) {
+  const ref = useRef<T>(null);
+
+  useEffect(() => {
+    if (ref.current === null) {
+      return;
+    }
+
+    const hostEl = ref.current;
+
+    if (typeof message === 'string') {
+      getAriaDescriber()?.describe(hostEl, message);
+
+      return () => {
+        getAriaDescriber()?.removeDescription(hostEl, message);
+      };
+    } else if (message.current !== null) {
+      const messageEl = message.current;
+
+      getAriaDescriber()?.describe(hostEl, message.current);
+
+      return () => {
+        getAriaDescriber()?.removeDescription(hostEl, messageEl);
+      };
+    } else {
+      return () => {};
+    }
+  }, [message]);
+}
 
 export function getAriaDescriber() {
   if (!getPlatform().isBrowser) {
@@ -138,7 +134,7 @@ export class AriaDescriber {
   }
 
   /** Unregisters all created message elements and removes the message container. */
-  ngOnDestroy() {
+  destroy() {
     const describedElements = document.querySelectorAll(`[${CDK_DESCRIBEDBY_HOST_ATTRIBUTE}]`);
 
     for (let i = 0; i < describedElements.length; i++) {

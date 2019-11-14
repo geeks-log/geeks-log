@@ -7,7 +7,8 @@
   "scripts": {
     "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.json && tsc -p tsconfig.esm.json",
     "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'",
-    "test": "tsc -d --noEmit && npm run lint && jest"
+    "test": "tsc -d --noEmit && npm run lint && jest",
+    "ci": "npm run test && npm run build"
   },
   "dependencies": {
     "diff_match_patch": "^0.1.1",

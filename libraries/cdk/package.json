@@ -1,9 +1,36 @@
 {
   "name": "@geeks-log/cdk",
   "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.build.json && tsc -p tsconfig.esm.json && rollup -c --silent",
     "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.{js,jsx,ts,tsx}'",
-    "build": "rm -rf dist/ && tsc -p tsconfig.json && rollup -c --silent"
+    "test": "tsc --noEmit && npm run lint && jest",
+    "ci": "npm run test && npm run build"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "rootDir": "src/",
+    "testRegex": ".spec.(ts|tsx)$",
+    "moduleDirectories": [
+      "node_modules/"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "jsdom",
+    "globals": {
+      "ts-jest": {
+        "packageJson": "package.json",
+        "tsConfig": "tsconfig.spec.json"
+      }
+    }
   },
   "peerDependencies": {
     "react": "~16.11.0",
@@ -14,15 +41,22 @@
     "@geeks-log/babel": "0.0.0",
     "@geeks-log/eslint": "0.0.0",
     "@geeks-log/typescript": "0.0.0",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^24.0.22",
     "@types/react": "~16.9.11",
     "@types/react-dom": "~16.9.4",
+    "@types/testing-library__react": "~9.1.2",
     "autoprefixer": "~9.7.1",
+    "jest": "^24.9.0",
     "node-sass": "~4.13.0",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
+    "react-test-renderer": "~16.11.0",
     "rollup": "~1.26.4",
     "rollup-plugin-postcss": "~2.0.3",
     "rxjs": "~6.5.3",
+    "ts-jest": "^24.1.0",
     "typescript": "~3.7.2"
   }
 }

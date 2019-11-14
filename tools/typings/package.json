@@ -2,7 +2,8 @@
   "name": "@geeks-log/typings",
   "version": "0.0.0",
   "scripts": {
-    "build": ""
+    "build": "",
+    "ci": ""
   },
   "devDependencies": {
     "@geeks-log/eslint": "0.0.0"

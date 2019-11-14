@@ -30,7 +30,7 @@ function removeLiveElement() {
   }
 }
 
-interface AnnounceOptions {
+export interface AnnounceOptions {
   message: string;
   politeness?: AriaLivePoliteness;
   duration?: number;

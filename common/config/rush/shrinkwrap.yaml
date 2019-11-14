@@ -23,12 +23,15 @@ dependencies:
   '@rush-temp/typescript': 'file:projects/typescript.tgz'
   '@rush-temp/typings': 'file:projects/typings.tgz'
   '@rush-temp/ui': 'file:projects/ui.tgz'
+  '@testing-library/react': 9.3.2
+  '@testing-library/react-hooks': 3.2.1
   '@types/express': 4.17.2
   '@types/lodash.isequal': 4.5.5
   '@types/passport': 1.0.1
   '@types/passport-jwt': 3.0.3
   '@types/react': 16.9.11
   '@types/react-dom': 16.9.4
+  '@types/testing-library__react': 9.1.2
   '@types/uuid': 3.4.6
   '@typescript-eslint/eslint-plugin': 2.6.1
   '@typescript-eslint/parser': 2.6.1
@@ -57,6 +60,7 @@ dependencies:
   pretty-quick: 1.8.1
   react: 16.11.0
   react-dom: 16.11.0
+  react-test-renderer: 16.11.0
   reflect-metadata: 0.1.13
   rollup: 1.26.4
   rollup-plugin-postcss: 2.0.3
@@ -1258,6 +1262,75 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-69gFVDs7mJfNjv9Zs5DFVD+pvBW+k1TaHSOqUWqAyTTfLcKI/EMYQgvEvziRd+zAFtUOoye6MfWh0qvinGISPw==
+  /@sheerun/mutationobserver-shim/0.3.2:
+    dev: false
+    resolution:
+      integrity: sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
+  /@testing-library/dom/6.10.1:
+    dependencies:
+      '@babel/runtime': 7.7.2
+      '@sheerun/mutationobserver-shim': 0.3.2
+      '@types/testing-library__dom': 6.10.0
+      aria-query: 3.0.0
+      pretty-format: 24.9.0
+      wait-for-expect: 3.0.1
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-5BPKxaO+zSJDUbVZBRNf9KrmDkm/EcjjaHSg3F9+031VZyPACKXlwLBjVzZxheunT9m72DoIq7WvyE457/Xweg==
+  /@testing-library/react-hooks/3.2.1:
+    dependencies:
+      '@babel/runtime': 7.7.2
+      '@types/testing-library__react-hooks': 3.1.0
+    dev: false
+    peerDependencies:
+      react: '>=16.9.0'
+      react-test-renderer: '>=16.9.0'
+    resolution:
+      integrity: sha512-1OB6Ksvlk6BCJA1xpj8/WWz0XVd1qRcgqdaFAq+xeC6l61Ucj0P6QpA5u+Db/x9gU4DCX8ziR5b66Mlfg0M2RA==
+  /@testing-library/react-hooks/3.2.1/2d953f8cc08fbfe7584fba7e53830728:
+    dependencies:
+      '@babel/runtime': 7.7.2
+      '@types/testing-library__react-hooks': 3.1.0
+      react: 16.11.0
+      react-test-renderer: /react-test-renderer/16.11.0/react@16.11.0
+    dev: false
+    id: registry.npmjs.org/@testing-library/react-hooks/3.2.1
+    peerDependencies:
+      react: '>=16.9.0'
+      react-test-renderer: '>=16.9.0'
+    resolution:
+      integrity: sha512-1OB6Ksvlk6BCJA1xpj8/WWz0XVd1qRcgqdaFAq+xeC6l61Ucj0P6QpA5u+Db/x9gU4DCX8ziR5b66Mlfg0M2RA==
+  /@testing-library/react/9.3.2:
+    dependencies:
+      '@babel/runtime': 7.7.2
+      '@testing-library/dom': 6.10.1
+      '@types/testing-library__react': 9.1.2
+    dev: false
+    engines:
+      node: '>=8'
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    resolution:
+      integrity: sha512-J6ftWtm218tOLS175MF9eWCxGp+X+cUXCpkPIin8KAXWtyZbr9CbqJ8M8QNd6spZxJDAGlw+leLG4MJWLlqVgg==
+  /@testing-library/react/9.3.2/react-dom@16.11.0+react@16.11.0:
+    dependencies:
+      '@babel/runtime': 7.7.2
+      '@testing-library/dom': 6.10.1
+      '@types/testing-library__react': 9.1.2
+      react: 16.11.0
+      react-dom: /react-dom/16.11.0/react@16.11.0
+    dev: false
+    engines:
+      node: '>=8'
+    id: registry.npmjs.org/@testing-library/react/9.3.2
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    resolution:
+      integrity: sha512-J6ftWtm218tOLS175MF9eWCxGp+X+cUXCpkPIin8KAXWtyZbr9CbqJ8M8QNd6spZxJDAGlw+leLG4MJWLlqVgg==
   /@types/babel__core/7.1.3:
     dependencies:
       '@babel/parser': 7.7.3
@@ -1431,6 +1504,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fya9xteU/n90tda0s+FtN5Ym4tbgxpq/hb/Af24dvs6uYnYn+fspaxw5USlw0R8apDNwxsqumdRoCoKitckQqw==
+  /@types/react-test-renderer/16.9.1:
+    dependencies:
+      '@types/react': 16.9.11
+    dev: false
+    resolution:
+      integrity: sha512-nCXQokZN1jp+QkoDNmDZwoWpKY8HDczqevIDO4Uv9/s9rbGPbSpy8Uaxa5ixHKkcm/Wt0Y9C3wCxZivh4Al+rQ==
   /@types/react/16.9.11:
     dependencies:
       '@types/prop-types': 15.7.3
@@ -1449,6 +1528,26 @@ packages:
     dev: false
     resolution:
       integrity: sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
+  /@types/testing-library__dom/6.10.0:
+    dependencies:
+      pretty-format: 24.9.0
+    dev: false
+    resolution:
+      integrity: sha512-mL/GMlyQxiZplbUuFNwA0vAI3k3uJNSf6slr5AVve9TXmfLfyefNT0uHHnxwdYuPMxYD5gI/+dgAvc/5opW9JQ==
+  /@types/testing-library__react-hooks/3.1.0:
+    dependencies:
+      '@types/react': 16.9.11
+      '@types/react-test-renderer': 16.9.1
+    dev: false
+    resolution:
+      integrity: sha512-QJc1sgH9DD6jbfybzugnP0sY8wPzzIq8sHDBuThzCr2ZEbyHIaAvN9ytx/tHzcWL5MqmeZJqiUm/GsythaGx3g==
+  /@types/testing-library__react/9.1.2:
+    dependencies:
+      '@types/react-dom': 16.9.4
+      '@types/testing-library__dom': 6.10.0
+    dev: false
+    resolution:
+      integrity: sha512-CYaMqrswQ+cJACy268jsLAw355DZtPZGt3Jwmmotlcu8O/tkoXBI6AeZ84oZBJsIsesozPKzWzmv/0TIU+1E9Q==
   /@types/uuid/3.4.6:
     dependencies:
       '@types/node': 12.12.7
@@ -1847,6 +1946,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-/Pyq2KbxW4YcyIG6iyfMtMQSaAk=
+  /aria-query/3.0.0:
+    dependencies:
+      ast-types-flow: 0.0.7
+      commander: 2.20.3
+    dev: false
+    resolution:
+      integrity: sha1-ZbP8wcoRVajJrmTW7uKX8V1RM8w=
   /arr-diff/4.0.0:
     dev: false
     engines:
@@ -1934,6 +2040,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
+  /ast-types-flow/0.0.7:
+    dev: false
+    resolution:
+      integrity: sha1-9wtzXGvKGlycItmCw+Oef+ujva0=
   /astral-regex/1.0.0:
     dev: false
     engines:
@@ -7603,6 +7713,30 @@ packages:
     dev: false
     resolution:
       integrity: sha512-gbBVYR2p8mnriqAwWx9LbuUrShnAuSCNnuPGyc7GJrMVQtPDAh8iLpv7FRuMPFb56KkaVZIYSz1PrjI9q0QPCw==
+  /react-test-renderer/16.11.0:
+    dependencies:
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      react-is: 16.11.0
+      scheduler: 0.17.0
+    dev: false
+    peerDependencies:
+      react: ^16.0.0
+    resolution:
+      integrity: sha512-nh9gDl8R4ut+ZNNb2EeKO5VMvTKxwzurbSMuGBoKtjpjbg8JK/u3eVPVNi1h1Ue+eYK9oSzJjb+K3lzLxyA4ag==
+  /react-test-renderer/16.11.0/react@16.11.0:
+    dependencies:
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      react: 16.11.0
+      react-is: 16.11.0
+      scheduler: 0.17.0
+    dev: false
+    id: registry.npmjs.org/react-test-renderer/16.11.0
+    peerDependencies:
+      react: ^16.0.0
+    resolution:
+      integrity: sha512-nh9gDl8R4ut+ZNNb2EeKO5VMvTKxwzurbSMuGBoKtjpjbg8JK/u3eVPVNi1h1Ue+eYK9oSzJjb+K3lzLxyA4ag==
   /react/16.11.0:
     dependencies:
       loose-envify: 1.4.0
@@ -8901,6 +9035,28 @@ packages:
       jest: '>=24 <25'
     resolution:
       integrity: sha512-HEGfrIEAZKfu1pkaxB9au17b1d9b56YZSqz5eCVE8mX68+5reOvlM93xGOzzCREIov9mdH7JBG+s0UyNAqr0tQ==
+  /ts-jest/24.1.0/jest@24.9.0:
+    dependencies:
+      bs-logger: 0.2.6
+      buffer-from: 1.1.1
+      fast-json-stable-stringify: 2.0.0
+      jest: 24.9.0
+      json5: 2.1.1
+      lodash.memoize: 4.1.2
+      make-error: 1.3.5
+      mkdirp: 0.5.1
+      resolve: 1.12.0
+      semver: 5.7.1
+      yargs-parser: 10.1.0
+    dev: false
+    engines:
+      node: '>= 6'
+    hasBin: true
+    id: registry.npmjs.org/ts-jest/24.1.0
+    peerDependencies:
+      jest: '>=24 <25'
+    resolution:
+      integrity: sha512-HEGfrIEAZKfu1pkaxB9au17b1d9b56YZSqz5eCVE8mX68+5reOvlM93xGOzzCREIov9mdH7JBG+s0UyNAqr0tQ==
   /tsconfig-paths/3.9.0:
     dependencies:
       '@types/json5': 0.0.29
@@ -9188,6 +9344,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-gqwr/2PZUOqeMYmlimViX+3xkEU=
+  /wait-for-expect/3.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-3Ha7lu+zshEG/CeHdcpmQsZnnZpPj/UsG3DuKO8FskjuDbkx3jE3845H+CuwZjA2YWYDfKMU2KhnCaXMLd3wVw==
   /walker/1.0.7:
     dependencies:
       makeerror: 1.0.11
@@ -9543,20 +9703,27 @@ packages:
     version: 0.0.0
   'file:projects/cdk.tgz':
     dependencies:
+      '@testing-library/react': /@testing-library/react/9.3.2/react-dom@16.11.0+react@16.11.0
+      '@testing-library/react-hooks': /@testing-library/react-hooks/3.2.1/2d953f8cc08fbfe7584fba7e53830728
+      '@types/jest': 24.0.22
       '@types/react': 16.9.11
       '@types/react-dom': 16.9.4
+      '@types/testing-library__react': 9.1.2
       autoprefixer: 9.7.1
+      jest: 24.9.0
       node-sass: 4.13.0
       react: 16.11.0
       react-dom: /react-dom/16.11.0/react@16.11.0
+      react-test-renderer: /react-test-renderer/16.11.0/react@16.11.0
       rollup: 1.26.5
       rollup-plugin-postcss: 2.0.3
       rxjs: 6.5.3
+      ts-jest: /ts-jest/24.1.0/jest@24.9.0
       typescript: 3.7.2
     dev: false
     name: '@rush-temp/cdk'
     resolution:
-      integrity: sha512-6paB1QcmAbnhBNbSO2kk4zU3HswagFXqZPj7cWUhPRsyR2rFXwmiZn20v+u7lDONGjXomUo6mToRsZExKnuIIw==
+      integrity: sha512-lfae4wn1cV+7Q7HKXqCCnMBykgwtJaHnXiO75VjAf7E62kz2NaiMK6BVrN0WtlWfZ9nw6gA7Sqyc3CgsMRTeJA==
       tarball: 'file:projects/cdk.tgz'
     version: 0.0.0
   'file:projects/eslint-plugin.tgz':
@@ -9717,12 +9884,15 @@ specifiers:
   '@rush-temp/typescript': 'file:./projects/typescript.tgz'
   '@rush-temp/typings': 'file:./projects/typings.tgz'
   '@rush-temp/ui': 'file:./projects/ui.tgz'
+  '@testing-library/react': ^9.3.2
+  '@testing-library/react-hooks': ^3.2.1
   '@types/express': ^4.17.2
   '@types/lodash.isequal': ^4.5.5
   '@types/passport': ^1.0.1
   '@types/passport-jwt': ^3.0.3
   '@types/react': ~16.9.11
   '@types/react-dom': ~16.9.4
+  '@types/testing-library__react': ~9.1.2
   '@types/uuid': ^3.4.6
   '@typescript-eslint/eslint-plugin': ~2.6.1
   '@typescript-eslint/parser': ~2.6.1
@@ -9751,6 +9921,7 @@ specifiers:
   pretty-quick: ~1.8.0
   react: ~16.11.0
   react-dom: ~16.11.0
+  react-test-renderer: ~16.11.0
   reflect-metadata: ^0.1.13
   rollup: ~1.26.4
   rollup-plugin-postcss: ~2.0.3
