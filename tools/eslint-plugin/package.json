@@ -6,9 +6,8 @@
     "lib/"
   ],
   "scripts": {
-    "build": "",
-    "test": "node test/index.test.js",
-    "ci": "npm run test"
+    "build": "npm run test",
+    "test": "node test/index.test.js"
   },
   "devDependencies": {
     "eslint": "~6.6.0",

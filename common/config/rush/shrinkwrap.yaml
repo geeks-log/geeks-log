@@ -26,7 +26,9 @@ dependencies:
   '@testing-library/react': 9.3.2
   '@testing-library/react-hooks': 3.2.1
   '@types/express': 4.17.2
+  '@types/jest': 24.0.23
   '@types/lodash.isequal': 4.5.5
+  '@types/node': 10.17.5
   '@types/passport': 1.0.1
   '@types/passport-jwt': 3.0.3
   '@types/react': 16.9.11
@@ -52,6 +54,7 @@ dependencies:
   event-store-client: 1.1.0
   immer: 5.0.0
   jest: 24.9.0
+  jest-standard-reporter: 1.0.2
   lodash.isequal: 4.5.0
   node-sass: 4.13.0
   passport: 0.4.0
@@ -1289,12 +1292,9 @@ packages:
       react-test-renderer: '>=16.9.0'
     resolution:
       integrity: sha512-1OB6Ksvlk6BCJA1xpj8/WWz0XVd1qRcgqdaFAq+xeC6l61Ucj0P6QpA5u+Db/x9gU4DCX8ziR5b66Mlfg0M2RA==
-  /@testing-library/react-hooks/3.2.1/2d953f8cc08fbfe7584fba7e53830728:
+  /@testing-library/react-hooks/3.2.1/react-test-renderer@16.11.0:
     dependencies:
-      '@babel/runtime': 7.7.2
-      '@types/testing-library__react-hooks': 3.1.0
-      react: 16.11.0
-      react-test-renderer: /react-test-renderer/16.11.0/react@16.11.0
+      react-test-renderer: 16.11.0
     dev: false
     id: registry.npmjs.org/@testing-library/react-hooks/3.2.1
     peerDependencies:
@@ -1315,13 +1315,9 @@ packages:
       react-dom: '*'
     resolution:
       integrity: sha512-J6ftWtm218tOLS175MF9eWCxGp+X+cUXCpkPIin8KAXWtyZbr9CbqJ8M8QNd6spZxJDAGlw+leLG4MJWLlqVgg==
-  /@testing-library/react/9.3.2/react-dom@16.11.0+react@16.11.0:
+  /@testing-library/react/9.3.2/react-dom@16.11.0:
     dependencies:
-      '@babel/runtime': 7.7.2
-      '@testing-library/dom': 6.10.1
-      '@types/testing-library__react': 9.1.2
-      react: 16.11.0
-      react-dom: /react-dom/16.11.0/react@16.11.0
+      react-dom: 16.11.0
     dev: false
     engines:
       node: '>=8'
@@ -1423,6 +1419,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-t2OvhNZnrNjlzi2i0/cxbLVM59WN15I2r1Qtb7wDv28PnV9IzrPtagFRey/S9ezdLD0zyh1XGMQIEQND2YEfrw==
+  /@types/jest/24.0.23:
+    dependencies:
+      jest-diff: 24.9.0
+    dev: false
+    resolution:
+      integrity: sha512-L7MBvwfNpe7yVPTXLn32df/EK+AMBFAFvZrRuArGs7npEWnlziUXK+5GMIUTI4NIuwok3XibsjXCs5HxviYXjg==
   /@types/json-schema/7.0.3:
     dev: false
     resolution:
@@ -5510,6 +5512,16 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-uI/rszGSs73xCM0l+up7O7a40o90cnrk429LOiK3aeTvfC0HHmldbd81/B7Ix81KSFe1lwkbl7GnBGG4UfuDew==
+  /jest-standard-reporter/1.0.2:
+    dependencies:
+      chalk: 2.4.2
+      jest-util: 24.9.0
+      path: 0.12.7
+      slash: 3.0.0
+      string-length: 3.1.0
+    dev: false
+    resolution:
+      integrity: sha512-Y56VgA4taaaa19MpTIxG8KLnO/Sh1nKCcwxUoJ2NOBihcFDCaze5LLySZ1dQAi2EqFPFsbFHPlqHITJnYexaKA==
   /jest-util/24.9.0:
     dependencies:
       '@jest/console': 24.9.0
@@ -6987,6 +6999,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-T2ZUsdZFHgA3u4e5PfPbjd7HDDpxPnQb5jN0SrDsjNSuVXHJqtwTnWqG0B1jZrgmJ/7lj1EmVIByWt1gxGkWvg==
+  /path/0.12.7:
+    dependencies:
+      process: 0.11.10
+      util: 0.10.4
+    dev: false
+    resolution:
+      integrity: sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=
   /pause/0.0.1:
     dev: false
     resolution:
@@ -7696,19 +7715,6 @@ packages:
       react: ^16.0.0
     resolution:
       integrity: sha512-nrRyIUE1e7j8PaXSPtyRKtz+2y9ubW/ghNgqKFHHAHaeP0fpF5uXR+sq8IMRHC+ZUxw7W9NyCDTBtwWxvkb0iA==
-  /react-dom/16.11.0/react@16.11.0:
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.7.2
-      react: 16.11.0
-      scheduler: 0.17.0
-    dev: false
-    id: registry.npmjs.org/react-dom/16.11.0
-    peerDependencies:
-      react: ^16.0.0
-    resolution:
-      integrity: sha512-nrRyIUE1e7j8PaXSPtyRKtz+2y9ubW/ghNgqKFHHAHaeP0fpF5uXR+sq8IMRHC+ZUxw7W9NyCDTBtwWxvkb0iA==
   /react-is/16.11.0:
     dev: false
     resolution:
@@ -7720,19 +7726,6 @@ packages:
       react-is: 16.11.0
       scheduler: 0.17.0
     dev: false
-    peerDependencies:
-      react: ^16.0.0
-    resolution:
-      integrity: sha512-nh9gDl8R4ut+ZNNb2EeKO5VMvTKxwzurbSMuGBoKtjpjbg8JK/u3eVPVNi1h1Ue+eYK9oSzJjb+K3lzLxyA4ag==
-  /react-test-renderer/16.11.0/react@16.11.0:
-    dependencies:
-      object-assign: 4.1.1
-      prop-types: 15.7.2
-      react: 16.11.0
-      react-is: 16.11.0
-      scheduler: 0.17.0
-    dev: false
-    id: registry.npmjs.org/react-test-renderer/16.11.0
     peerDependencies:
       react: ^16.0.0
     resolution:
@@ -8383,6 +8376,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==
+  /slash/3.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
   /slice-ansi/2.1.0:
     dependencies:
       ansi-styles: 3.2.1
@@ -8612,6 +8611,15 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-1A27aGo6zpYMHP/KVivyxF+DY+0=
+  /string-length/3.1.0:
+    dependencies:
+      astral-regex: 1.0.0
+      strip-ansi: 5.2.0
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-Ttp5YvkGm5v9Ijagtaz1BnN+k9ObpvS0eIBblPMp2YWL8FBmi9qblQ9fexc2k/CXFgrTIteU3jAw3payCnwSTA==
   /string-width/1.0.2:
     dependencies:
       code-point-at: 1.1.0
@@ -9276,6 +9284,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-evsa/lCAUkZInj23/g7TeTNqwPk=
+  /util/0.10.4:
+    dependencies:
+      inherits: 2.0.3
+    dev: false
+    resolution:
+      integrity: sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==
   /util/0.11.1:
     dependencies:
       inherits: 2.0.3
@@ -9703,8 +9717,8 @@ packages:
     version: 0.0.0
   'file:projects/cdk.tgz':
     dependencies:
-      '@testing-library/react': /@testing-library/react/9.3.2/react-dom@16.11.0+react@16.11.0
-      '@testing-library/react-hooks': /@testing-library/react-hooks/3.2.1/2d953f8cc08fbfe7584fba7e53830728
+      '@testing-library/react': /@testing-library/react/9.3.2/react-dom@16.11.0
+      '@testing-library/react-hooks': /@testing-library/react-hooks/3.2.1/react-test-renderer@16.11.0
       '@types/jest': 24.0.22
       '@types/react': 16.9.11
       '@types/react-dom': 16.9.4
@@ -9713,12 +9727,12 @@ packages:
       jest: 24.9.0
       node-sass: 4.13.0
       react: 16.11.0
-      react-dom: /react-dom/16.11.0/react@16.11.0
-      react-test-renderer: /react-test-renderer/16.11.0/react@16.11.0
+      react-dom: 16.11.0
+      react-test-renderer: 16.11.0
       rollup: 1.26.5
       rollup-plugin-postcss: 2.0.3
       rxjs: 6.5.3
-      ts-jest: /ts-jest/24.1.0/jest@24.9.0
+      ts-jest: 24.1.0
       typescript: 3.7.2
     dev: false
     name: '@rush-temp/cdk'
@@ -9759,14 +9773,15 @@ packages:
   'file:projects/event-system.tgz':
     dependencies:
       '@types/jest': 24.0.22
-      '@types/node': 12.12.7
+      '@types/node': 10.17.5
       jest: 24.9.0
-      ts-jest: 24.1.0
+      jest-standard-reporter: 1.0.2
+      ts-jest: /ts-jest/24.1.0/jest@24.9.0
       typescript: 3.7.2
     dev: false
     name: '@rush-temp/event-system'
     resolution:
-      integrity: sha512-yz1qlmRlcTvwNFsPo7wko9F9rgqC6iDdj7gs6Ti01NIrMY55TwRIsYqYePbBpukVTmv0E6Jix1QuiBpL8gePGg==
+      integrity: sha512-rfRK2+oONqumNAIrxXnfo6c62Il5fvXfaIZ5ZR/yEAPjFe5Vo7Ah80OirnqUHaN+sY33eXwj6BOim28l9VVt9Q==
       tarball: 'file:projects/event-system.tgz'
     version: 0.0.0
   'file:projects/note-diff.tgz':
@@ -9887,7 +9902,9 @@ specifiers:
   '@testing-library/react': ^9.3.2
   '@testing-library/react-hooks': ^3.2.1
   '@types/express': ^4.17.2
+  '@types/jest': ^24.0.22
   '@types/lodash.isequal': ^4.5.5
+  '@types/node': ^10.17.5
   '@types/passport': ^1.0.1
   '@types/passport-jwt': ^3.0.3
   '@types/react': ~16.9.11
@@ -9913,6 +9930,7 @@ specifiers:
   event-store-client: ^1.1.0
   immer: ^5.0.0
   jest: ^24.9.0
+  jest-standard-reporter: ^1.0.2
   lodash.isequal: ^4.5.0
   node-sass: ~4.13.0
   passport: ^0.4.0

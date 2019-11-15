@@ -5,10 +5,7 @@
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.json && tsc -p tsconfig.esm.json",
-    "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'",
-    "test": "tsc -d --noEmit && npm run lint && jest",
-    "ci": "npm run test && npm run build"
+    "build": "scripts/build.sh"
   },
   "dependencies": {
     "diff_match_patch": "^0.1.1",
@@ -21,6 +18,7 @@
     "@types/jest": "^24.0.22",
     "@types/lodash.isequal": "^4.5.5",
     "jest": "^24.9.0",
+    "jest-standard-reporter": "^1.0.2",
     "ts-jest": "^24.1.0",
     "typescript": "~3.7.2"
   },

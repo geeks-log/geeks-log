@@ -6,7 +6,6 @@
     "configs/"
   ],
   "scripts": {
-    "build": "",
-    "ci": ""
+    "build": ""
   }
 }

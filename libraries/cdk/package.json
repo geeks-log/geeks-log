@@ -5,10 +5,7 @@
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.build.json && tsc -p tsconfig.esm.json && rollup -c --silent",
-    "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.{js,jsx,ts,tsx}'",
-    "test": "tsc --noEmit && npm run lint && jest",
-    "ci": "npm run test && npm run build"
+    "build": "scripts/build.sh"
   },
   "jest": {
     "preset": "ts-jest",
@@ -49,6 +46,7 @@
     "@types/testing-library__react": "~9.1.2",
     "autoprefixer": "~9.7.1",
     "jest": "^24.9.0",
+    "jest-standard-reporter": "^1.0.2",
     "node-sass": "~4.13.0",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",

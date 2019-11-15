@@ -2,10 +2,7 @@
   "name": "@geeks-log/ui",
   "version": "0.0.0",
   "scripts": {
-    "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.{js,jsx,ts,tsx}'",
-    "build": "tsc -p tsconfig.json",
-    "test": "tsc --noEmit && npm run lint",
-    "ci": "npm run test && npm run build"
+    "build": ""
   },
   "devDependencies": {
     "@geeks-log/babel": "0.0.0",
