@@ -12,7 +12,7 @@
     "lodash.isequal": "^4.5.0"
   },
   "devDependencies": {
-    "@geeks-log/eslint": "0.0.0",
+    "@geeks-log/eslint": "0.0.1",
     "@geeks-log/typescript": "0.0.0",
     "@types/node": "^10.17.5",
     "@types/jest": "^24.0.22",
