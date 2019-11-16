@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
-  "rushVersion": "5.11.4",
-  "pnpmVersion": "2.15.1",
+  "rushVersion": "5.16.0",
+  "pnpmVersion": "3.1.1",
   "pnpmOptions": {
     "strictPeerDependencies": true
   },
@@ -16,7 +16,9 @@
   },
   "eventHooks": {
     "preRushInstall": [],
-    "postRushInstall": [],
+    "postRushInstall": [
+      "common/rush-hooks/postRushInstall"
+    ],
     "preRushBuild": [],
     "postRushBuild": []
   },

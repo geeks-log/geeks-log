@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const fs = require('fs');
+
+const cwd = process.cwd();
+
+function patchEslint() {
+  const eslintSymlinkPath = path.resolve(cwd, 'common/temp/node_modules/eslint');
+
+  try {
+    const eslintRealPath = fs.realpathSync(eslintSymlinkPath, 'utf8');
+
+    // lib/shared/relative-module-resolver.js
+    const targetFile = path.resolve(eslintRealPath, 'lib/shared/relative-module-resolver.js');
+    let fileData = fs.readFileSync(targetFile, 'utf8');
+
+    if (fileData.includes('relativeToPath.includes(\'__placeholder__\')')) {
+      return;
+    }
+
+    fileData = fileData.replace(
+      /resolve\(moduleName, relativeToPath\) {/,
+      `resolve(moduleName, relativeToPath) {
+        if (relativeToPath.includes('__placeholder__')) {
+          const replacedPath = '${path.resolve(cwd, 'tools/eslint/__placeholder__.js')}';
+          return createRequire(replacedPath).resolve(moduleName);
+        }
+      `
+    );
+
+    fs.writeFileSync(targetFile, fileData, 'utf8');
+  } catch (error) {
+    if (process.stderr != null) {
+      process.stderr.write(error.toString());
+    } else {
+      console.error(error);
+    }
+  }
+}
+
+patchEslint();
