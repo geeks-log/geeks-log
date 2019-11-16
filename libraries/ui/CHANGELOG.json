@@ -1,0 +1,17 @@
+{
+  "name": "@geeks-log/ui",
+  "entries": [
+    {
+      "version": "0.0.1",
+      "tag": "@geeks-log/ui_v0.0.1",
+      "date": "Sat, 16 Nov 2019 16:12:37 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Publish first package"
+          }
+        ]
+      }
+    }
+  ]
+}
