@@ -19,7 +19,7 @@ jobs:
       - name: Checking for missing change logs
         run: |
           set -e
-          git remote set-url origin https://seokju-na:${{secrets.GITHUB_TOKEN}}@github.com/seokju-na/geeks-log
+          git remote set-url origin https://seokju-na:${{secrets.GITHUB_PUBLISH_TOKEN}}@github.com/seokju-na/geeks-log
           git fetch origin master:refs/remotes/origin/master -a
           node common/scripts/install-run-rush.js change -v
       - name: Installing
