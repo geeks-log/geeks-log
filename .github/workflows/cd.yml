@@ -40,7 +40,6 @@ jobs:
           --apply \
           --publish \
           --target-branch master \
-          --apply-git-tags-on-pack \
           --include-all \
           --add-commit-details \
           --set-access-level public \
