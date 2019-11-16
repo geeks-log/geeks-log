@@ -4,7 +4,10 @@ Blog platform for geeks.
 
 > In-Development
 
-## Services
+
+## Package overview
+
+### Services
 
 <!-- the table below was generated using the ./repo-scripts/repo-toolbox script -->
 
@@ -12,7 +15,7 @@ Blog platform for geeks.
 | ------ | ------- | --------- | ------- |
 | @geeks-log/backend | IN-DEVELOPMENT | IN-DEVELOPMENT | [/services/backend](./services/backend/) |
 
-## Libraries
+### Libraries
 
 | Name   | Version | Changelog | Directory |
 | ------ | ------- | --------- | ------- |
@@ -21,7 +24,7 @@ Blog platform for geeks.
 | @geeks-log/note-diff | IN-DEVELOPMENT | IN-DEVELOPMENT | [/libraries/note-diff](./libraries/note-diff/) |
 | @geeks-log/ui | IN-DEVELOPMENT | IN-DEVELOPMENT | [/libraries/ui](./libraries/ui/) |
 
-## Tools
+### Tools
 
 | Name   | Version | Changelog | Directory |
 | ------ | ------- | --------- | ------- |
@@ -30,3 +33,8 @@ Blog platform for geeks.
 | @geeks-log/eslint-plugin | IN-DEVELOPMENT | IN-DEVELOPMENT | [/tools/eslint-plugin](./tools/eslint-plugin) |
 | @geeks-log/typescript | IN-DEVELOPMENT | IN-DEVELOPMENT | [/tools/typescript](./tools/eslint-typescript) |
 | @geeks-log/typings | IN-DEVELOPMENT | IN-DEVELOPMENT | [/tools/typings](./tools/eslint-typings) |
+
+
+## License
+
+MIT Licensed
