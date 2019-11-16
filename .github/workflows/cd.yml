@@ -7,21 +7,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Setup Node v10.x
-      uses: actions/setup-node@v1
-      with:
-        node-versio: '10.x'
-    - name: Bump version
-      run: |
-        set -e
-        git fetch origin master:refs/remotes/origin/master -a
-        node common/scripts/install-run-rush.js version --bump
-    - name: Publish Npm
-      run: |
-        node common/scripts/install-run-rush.js publish --apply \
-        --include-all \
-        --add-commit-details \
-        --set-access-level public \
-        --registry https://npm.pkg.github.com \
-        --npm-auth-token ${{secrets.GITHUB_PUBLISH_TOKEN}}
+      - uses: actions/checkout@v1
+      - name: Setup Node v10.x
+        uses: actions/setup-node@v1
+        with:
+          node-versio: '10.x'
+      - name: Bump version
+        run: |
+          set -e
+          git fetch origin master:refs/remotes/origin/master -a
+          node common/scripts/install-run-rush.js version --bump
+      - name: Publish Npm
+        run: |
+          node common/scripts/install-run-rush.js publish --apply \
+          --include-all \
+          --add-commit-details \
+          --set-access-level public \
+          --registry https://npm.pkg.github.com \
+          --npm-auth-token ${{secrets.GITHUB_PUBLISH_TOKEN}}
