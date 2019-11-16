@@ -1,6 +1,6 @@
 {
   "name": "@geeks-log/ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "webpack-dev-server",
     "deploy-demo": "webpack && firebase deploy --only hosting",
