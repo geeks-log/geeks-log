@@ -9,3 +9,8 @@ geeks-log-eslint -c .eslintrc.js 'src/**/*.{js,jsx,ts,tsx}'
 # Build
 rm -rf dist/
 tsc -p tsconfig.json
+
+rollup -c --silent
+
+# Build demo
+webpack
