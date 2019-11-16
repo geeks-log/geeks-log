@@ -1,0 +1,26 @@
+name: CD
+on:
+  push:
+    branches: 
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Node v10.x
+      uses: actions/setup-node@v1
+      with:
+        node-versio: '10.x'
+    - name: Bump version
+      run: |
+        set -e
+        node common/scripts/install-run-rush.js version --bump --target-branch master
+    - name: Publish Npm
+      run: |
+        node common/scripts/install-run-rush.js publish --apply \
+        --include-all \
+        --target-branch master \
+        --add-commit-details \
+        --set-access-level public \
+        --registry https://npm.pkg.github.com \
+        --npm-auth-token ${{secrets.GITHUB_TOKEN}}
