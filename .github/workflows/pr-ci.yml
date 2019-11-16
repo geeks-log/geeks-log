@@ -1,0 +1,23 @@
+name: Pull Requests CI
+on: [pull_request]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node v10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Checking for missing change logs
+        run: |
+          set -e
+          git fetch origin master:refs/remotes/origin/master -a
+          node common/scripts/install-run-rush.js change -v
+      - name: Installing
+        run: |
+          node common/scripts/install-run-rush.js install
+      - name: Building
+        run: |
+          node common/scripts/install-run-rush.js rebuild --verbose
