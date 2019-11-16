@@ -19,6 +19,7 @@ jobs:
       - name: Checking for missing change logs
         run: |
           set -e
+          git remote set-url origin https://seokju-na:${{secrets.GITHUB_TOKEN}}@github.com/seokju-na/geeks-log
           git fetch origin master:refs/remotes/origin/master -a
           node common/scripts/install-run-rush.js change -v
       - name: Installing
@@ -29,15 +30,12 @@ jobs:
           node common/scripts/install-run-rush.js rebuild --verbose
       - name: Bump version (npm)
         run: |
-          set -e
-          git fetch origin master:refs/remotes/origin/master -a
           node common/scripts/install-run-rush.js version \
           --bump \
           --version-policy default \
-          --target-branch master
+          --target-branch origin/master
       - name: Publish (npm)
         run: |
-          git remote set-url origin https://seokju-na:${{secrets.GITHUB_TOKEN}}@github.com/seokju-na/geeks-log
           node common/scripts/install-run-rush.js publish \
           --apply \
           --target-branch master \
