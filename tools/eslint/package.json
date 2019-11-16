@@ -17,7 +17,6 @@
     "@typescript-eslint/eslint-plugin": "~2.6.1",
     "@typescript-eslint/parser": "~2.6.1",
     "eslint": "~6.6.0",
-    "eslint-seokjume": "https://github.com/seokju-na/eslint#87a6f33f208f87d12a5219e1adf5a4e9be079863",
     "eslint-config-prettier": "~6.5.0",
     "eslint-import-resolver-typescript": "~2.0.0",
     "eslint-plugin-import": "~2.18.2",
