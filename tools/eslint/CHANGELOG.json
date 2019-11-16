@@ -1,0 +1,17 @@
+{
+  "name": "@geeks-log/eslint",
+  "entries": [
+    {
+      "version": "0.0.1",
+      "tag": "@geeks-log/eslint_v0.0.1",
+      "date": "Sat, 16 Nov 2019 13:46:29 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@geeks-log/eslint-plugin\" from `0.0.0` to `1.0.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

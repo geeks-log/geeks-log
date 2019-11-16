@@ -2,6 +2,18 @@
   "name": "@geeks-log/typings",
   "entries": [
     {
+      "version": "0.1.1",
+      "tag": "@geeks-log/typings_v0.1.1",
+      "date": "Sat, 16 Nov 2019 13:46:29 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@geeks-log/eslint\" from `0.0.0` to `0.0.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.0",
       "tag": "@geeks-log/typings_v0.1.0",
       "date": "Sat, 16 Nov 2019 13:21:05 GMT",

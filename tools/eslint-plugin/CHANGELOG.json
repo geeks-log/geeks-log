@@ -1,0 +1,17 @@
+{
+  "name": "@geeks-log/eslint-plugin",
+  "entries": [
+    {
+      "version": "1.0.0",
+      "tag": "@geeks-log/eslint-plugin_v1.0.0",
+      "date": "Sat, 16 Nov 2019 13:46:29 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Publish 1.0.0"
+          }
+        ]
+      }
+    }
+  ]
+}
