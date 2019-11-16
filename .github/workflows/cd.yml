@@ -12,6 +12,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-versio: '10.x'
+        env:
+          FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+      - name: Prequirements
+        run: |
+          curl -sL firebase.tools | bash
       - name: Setup Github users
         run: |
           git config --local user.email "seokju.me@gmail.com"

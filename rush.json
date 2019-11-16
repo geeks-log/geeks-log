@@ -41,7 +41,7 @@
       "packageName": "@geeks-log/ui",
       "projectFolder": "libraries/ui",
       "reviewCategory": "libraries",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/note-diff",

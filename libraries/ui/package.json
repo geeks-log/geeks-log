@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "start": "webpack-dev-server",
+    "deploy-demo": "webpack && firebase deploy --only hosting",
+    "postpack": "npm run deploy-demo",
     "build": "scripts/build.sh"
   },
   "dependencies": {
