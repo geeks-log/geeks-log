@@ -50,7 +50,7 @@
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
     "react-test-renderer": "~16.11.0",
-    "rollup": "~1.26.4",
+    "rollup": "~1.27.0",
     "rollup-plugin-postcss": "~2.0.3",
     "rxjs": "~6.5.3",
     "ts-jest": "^24.1.0",

@@ -75,6 +75,7 @@ dependencies:
   react-dom: 16.11.0
   react-test-renderer: 16.11.0
   reflect-metadata: 0.1.13
+  rollup: 1.27.0
   rollup-plugin-postcss: 2.0.3
   rxjs: 6.5.3
   sass: 1.23.6
@@ -9998,15 +9999,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==
-  /rollup/1.26.5:
-    dependencies:
-      '@types/estree': 0.0.39
-      '@types/node': 10.17.5
-      acorn: 7.1.0
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha512-c6Pv0yWzjYNpy2DIhLFUnyP6e1UTGownr4IfpJcPY/k186RJjpaGGPRwKQ62KCauctG6dgtHt88pw1EGrPRkuA==
   /rollup/1.27.0:
     dependencies:
       '@types/estree': 0.0.39
@@ -12041,7 +12033,7 @@ packages:
       react: 16.11.0
       react-dom: 16.11.0_react@16.11.0
       react-test-renderer: 16.11.0_react@16.11.0
-      rollup: 1.26.5
+      rollup: 1.27.0
       rollup-plugin-postcss: 2.0.3
       rxjs: 6.5.3
       ts-jest: 24.1.0_jest@24.9.0
@@ -12049,7 +12041,7 @@ packages:
     dev: false
     name: '@rush-temp/cdk'
     resolution:
-      integrity: sha512-Mq4EKR1y5pCnoiQ+TWIkkeJMno7bFh4ZqAWVcew/nWXgyuurV6pQGSRDCbj4trPXaKbzhsB38+FHA3S2Bq5hjw==
+      integrity: sha512-8UCSgC2+hdSdDM3kTHvxM5ilLFRWUcopl/C1zzLRuVplMhbVUg39C4UG/1vOGhmZfUgWt0V8K+PMrpbLvZMCBQ==
       tarball: 'file:projects/cdk.tgz'
     version: 0.0.0
   'file:projects/eslint-plugin.tgz':
@@ -12134,6 +12126,7 @@ packages:
       '@types/classnames': 2.2.9
       '@types/react': 16.9.11
       '@types/react-dom': 16.9.4
+      autoprefixer: 9.7.1
       babel-loader: 8.0.6
       classnames: 2.2.6
       css-loader: 3.2.0_webpack@4.41.2
@@ -12144,6 +12137,7 @@ packages:
       react: 16.11.0
       react-dom: 16.11.0_react@16.11.0
       rollup: 1.27.0
+      rollup-plugin-postcss: 2.0.3
       rxjs: 6.5.3
       sass: 1.23.6
       sass-loader: 8.0.0_d39875043057fe4b3a4f94c474643f33
@@ -12156,7 +12150,7 @@ packages:
     dev: false
     name: '@rush-temp/ui'
     resolution:
-      integrity: sha512-fhSkrXYWSax8mzzrS7a0NZ5s0yqpvRo6XzWqwDlkrqpukk0ifPX6BmvZYCTjTyeyD0C89j2PKAN35YMFCmkweg==
+      integrity: sha512-15RqB7dN0qDSTF7ab/6ivPA9AAZaLqDhdNLCz91+wZeU+0ztOqzpOuwqIpUhCu3byGngCt+8mV0O0vO/u3Bv5w==
       tarball: 'file:projects/ui.tgz'
     version: 0.0.0
   github.com/seokju-na/eslint/87a6f33f208f87d12a5219e1adf5a4e9be079863:
@@ -12285,6 +12279,7 @@ specifiers:
   react-dom: ~16.11.0
   react-test-renderer: ~16.11.0
   reflect-metadata: ^0.1.13
+  rollup: ~1.27.0
   rollup-plugin-postcss: ~2.0.3
   rxjs: ~6.5.3
   sass: ~1.23.6

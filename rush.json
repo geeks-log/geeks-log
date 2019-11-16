@@ -6,6 +6,7 @@
     "strictPeerDependencies": true
   },
   "nodeSupportedVersionRange": ">=10.13.0 <11.0.0",
+  "ensureConsistentVersions": true,
   "projectFolderMinDepth": 2,
   "projectFolderMaxDepth": 2,
   "gitPolicy": {
@@ -16,9 +17,7 @@
   },
   "eventHooks": {
     "preRushInstall": [],
-    "postRushInstall": [
-      "common/rush-hooks/postRushInstall"
-    ],
+    "postRushInstall": ["common/rush-hooks/postRushInstall"],
     "preRushBuild": [],
     "postRushBuild": []
   },
@@ -60,31 +59,31 @@
       "packageName": "@geeks-log/typescript",
       "projectFolder": "tools/typescript",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/eslint-plugin",
       "projectFolder": "tools/eslint-plugin",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/eslint",
       "projectFolder": "tools/eslint",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/babel",
       "projectFolder": "tools/babel",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/typings",
       "projectFolder": "tools/typings",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     }
   ]
 }
