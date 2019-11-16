@@ -12,14 +12,14 @@
     "emotion-theming": "~10.0.19"
   },
   "peerDependencies": {
-    "@geeks-log/cdk": "0.0.1",
+    "@geeks-log/cdk": "0.0.2",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
     "rxjs": "~6.5.3"
   },
   "devDependencies": {
     "@geeks-log/babel": "0.0.0",
-    "@geeks-log/cdk": "0.0.1",
+    "@geeks-log/cdk": "0.0.2",
     "@geeks-log/eslint": "0.0.1",
     "@geeks-log/typescript": "0.0.0",
     "@types/classnames": "~2.2.9",
