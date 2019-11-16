@@ -12,6 +12,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-versio: '10.x'
+      - name: Setup Github users
+        run: |
+          git config --local user.email "seokju.me@gmail.com"
+          git config --local user.name "seokju-na"
       - name: Bump version
         run: |
           set -e
