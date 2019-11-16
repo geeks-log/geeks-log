@@ -60,31 +60,31 @@
       "packageName": "@geeks-log/typescript",
       "projectFolder": "tools/typescript",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/eslint-plugin",
       "projectFolder": "tools/eslint-plugin",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/eslint",
       "projectFolder": "tools/eslint",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/babel",
       "projectFolder": "tools/babel",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/typings",
       "projectFolder": "tools/typings",
       "reviewCategory": "tools",
-      "shouldPublish": false
+      "shouldPublish": true
     }
   ]
 }
