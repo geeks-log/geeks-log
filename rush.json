@@ -35,7 +35,7 @@
       "packageName": "@geeks-log/cdk",
       "projectFolder": "libraries/cdk",
       "reviewCategory": "libraries",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/ui",
@@ -59,31 +59,31 @@
       "packageName": "@geeks-log/typescript",
       "projectFolder": "tools/typescript",
       "reviewCategory": "tools",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@geeks-log/eslint-plugin",
       "projectFolder": "tools/eslint-plugin",
       "reviewCategory": "tools",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@geeks-log/eslint",
       "projectFolder": "tools/eslint",
       "reviewCategory": "tools",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@geeks-log/babel",
       "projectFolder": "tools/babel",
       "reviewCategory": "tools",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@geeks-log/typings",
       "projectFolder": "tools/typings",
       "reviewCategory": "tools",
-      "shouldPublish": true
+      "shouldPublish": false
     }
   ]
 }

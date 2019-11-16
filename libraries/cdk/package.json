@@ -7,6 +7,15 @@
   "scripts": {
     "build": "scripts/build.sh"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seokju-na/geeks-log/tree/master/libraries/cdk"
+  },
+  "files": [
+    "dist/",
+    "esm/",
+    "package.json"
+  ],
   "jest": {
     "preset": "ts-jest",
     "moduleFileExtensions": [
