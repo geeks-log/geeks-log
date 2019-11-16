@@ -2,6 +2,18 @@
   "name": "@geeks-log/cdk",
   "entries": [
     {
+      "version": "0.0.2",
+      "tag": "@geeks-log/cdk_v0.0.2",
+      "date": "Sat, 16 Nov 2019 14:43:34 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Publish again :sob:"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.1",
       "tag": "@geeks-log/cdk_v0.0.1",
       "date": "Sat, 16 Nov 2019 14:25:20 GMT",
