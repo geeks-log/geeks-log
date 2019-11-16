@@ -16,9 +16,7 @@
   },
   "eventHooks": {
     "preRushInstall": [],
-    "postRushInstall": [
-      "common/rush-hooks/postRushInstall"
-    ],
+    "postRushInstall": ["common/rush-hooks/postRushInstall"],
     "preRushBuild": [],
     "postRushBuild": []
   },
