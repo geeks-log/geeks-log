@@ -10,7 +10,7 @@
   "projectFolderMinDepth": 2,
   "projectFolderMaxDepth": 2,
   "gitPolicy": {
-    "versionBumpCommitMessage": "Applying package updates [skip ci]"
+    "versionBumpCommitMessage": "Applying package updates [skip]"
   },
   "repository": {
     "url": "https://github.com/seokju-na/geeks-log.git"

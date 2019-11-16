@@ -12,6 +12,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-versio: '10.x'
+      - name: Skip based on commit message
+        uses: veggiemonk/skip-commit@1.0.0
+        env:
+          COMMIT_FILTER: '[skip]'
       - name: Setup Github users
         run: |
           git config --local user.email "seokju.me@gmail.com"
