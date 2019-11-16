@@ -83,6 +83,7 @@ dependencies:
   style-loader: 1.0.0
   ts-jest: 24.1.0
   ts-loader: 6.2.1
+  tsconfig-paths-webpack-plugin: 3.2.0
   typescript: 3.7.2
   uuid: 3.3.3
   webpack: 4.41.2
@@ -11146,6 +11147,14 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-Dd9FekWuABGgjE1g0TlQJ+4dFUfYGbYcs52/HQObE0ZmUNjQlmLAS7xXsSzy23AMaMwipsx5sNHvoEpT2CZq1g==
+  /tsconfig-paths-webpack-plugin/3.2.0:
+    dependencies:
+      chalk: 2.4.2
+      enhanced-resolve: 4.1.1
+      tsconfig-paths: 3.9.0
+    dev: false
+    resolution:
+      integrity: sha512-S/gOOPOkV8rIL4LurZ1vUdYCVgo15iX9ZMJ6wx6w2OgcpT/G4wMyHB6WM+xheSqGMrWKuxFul+aXpCju3wmj/g==
   /tsconfig-paths/3.9.0:
     dependencies:
       '@types/json5': 0.0.29
@@ -12015,7 +12024,7 @@ packages:
     dev: false
     name: '@rush-temp/backend'
     resolution:
-      integrity: sha512-ZSQK0dBrEb/NGJUspDDUyNcdbjR+sW+gDnQFoh0iM4gSfeV3ZuONdT218LVOGf3qZhFLIdDwRSB/p4BgHrbUwg==
+      integrity: sha512-3IRFyojrZS51PUclww/9ZBNFgKLMs3reahZv3+VU4sd6y1S/PfLh8hDcF058RDOA6aeZlZNoUfCACmxyadYacQ==
       tarball: 'file:projects/backend.tgz'
     version: 0.0.0
   'file:projects/cdk.tgz':
@@ -12041,7 +12050,7 @@ packages:
     dev: false
     name: '@rush-temp/cdk'
     resolution:
-      integrity: sha512-8UCSgC2+hdSdDM3kTHvxM5ilLFRWUcopl/C1zzLRuVplMhbVUg39C4UG/1vOGhmZfUgWt0V8K+PMrpbLvZMCBQ==
+      integrity: sha512-KHqz1UZEDuCo9JDipEUbk3gA5xHVbIrQ+eEYLM69/9F5hJ9YLcRMwoWuAfpnt/MZU4ejsBwwoeO125G8sOdfKg==
       tarball: 'file:projects/cdk.tgz'
     version: 0.0.0
   'file:projects/eslint-plugin.tgz':
@@ -12071,7 +12080,7 @@ packages:
     dev: false
     name: '@rush-temp/eslint'
     resolution:
-      integrity: sha512-8Em1ByGogAyh6h3FIsFGSXRjq8Fv9w+1ecrVDLTgidCcSR7R08XOjPU4VkLVsuh60pbRiAo+XYR4O4f5J39e4A==
+      integrity: sha512-oK0/SCoujeCSL++vg2v9+e290dImjdtVBSPE7LAloo58adKCCM83rquB2mUh1Wb7mve+bESUH5iEME+Q2h9E8g==
       tarball: 'file:projects/eslint.tgz'
     version: 0.0.0
   'file:projects/event-system.tgz':
@@ -12085,7 +12094,7 @@ packages:
     dev: false
     name: '@rush-temp/event-system'
     resolution:
-      integrity: sha512-rfRK2+oONqumNAIrxXnfo6c62Il5fvXfaIZ5ZR/yEAPjFe5Vo7Ah80OirnqUHaN+sY33eXwj6BOim28l9VVt9Q==
+      integrity: sha512-BRNTgjK8KJ2PLKU8CXo1mCJkFLEPnn9kxpJ0z+lcMwSN0fT7bx7TtFrFWTO6wzpi6S+ptFbLdrv4J0F5mlf1MQ==
       tarball: 'file:projects/event-system.tgz'
     version: 0.0.0
   'file:projects/note-diff.tgz':
@@ -12102,7 +12111,7 @@ packages:
     dev: false
     name: '@rush-temp/note-diff'
     resolution:
-      integrity: sha512-YaIjO1Zox99vwm3pViJLdBeGTK9VgCUR6OJ5QUToiuRW9MN+p5QBm7nG+DLmLktdXsPo0TGzD1pS+s8manOZnw==
+      integrity: sha512-t9tIxsUNq15p38KOHM+upVqpWZWm85B+i/SEtQb+M3yzA50ZkpDzL/tsPZDPka/lgHoha0ar62KQU0/VOPTXOQ==
       tarball: 'file:projects/note-diff.tgz'
     version: 0.0.0
   'file:projects/typescript.tgz':
@@ -12116,7 +12125,7 @@ packages:
     dev: false
     name: '@rush-temp/typings'
     resolution:
-      integrity: sha512-PbtDagspmiDwgtz4auPfqfds0YhvQ+zO24bcNfxB9/N2t13FUMM7vb2Fdj7tH+f3EpUqCNp+ecxpuFdxUIZnNw==
+      integrity: sha512-8goLeYTG8ciG2DQ/DIXjeJiInUXzYQzrYYM8aWDR52NIQDJ0AqD5SiVfd8pUIw/gqsG7r3WzTS/AxHBRQsZ1MA==
       tarball: 'file:projects/typings.tgz'
     version: 0.0.0
   'file:projects/ui.tgz':
@@ -12143,6 +12152,7 @@ packages:
       sass-loader: 8.0.0_d39875043057fe4b3a4f94c474643f33
       style-loader: 1.0.0_webpack@4.41.2
       ts-loader: 6.2.1_typescript@3.7.2
+      tsconfig-paths-webpack-plugin: 3.2.0
       typescript: 3.7.2
       webpack: 4.41.2_webpack@4.41.2
       webpack-cli: 3.3.10_webpack@4.41.2
@@ -12150,7 +12160,7 @@ packages:
     dev: false
     name: '@rush-temp/ui'
     resolution:
-      integrity: sha512-15RqB7dN0qDSTF7ab/6ivPA9AAZaLqDhdNLCz91+wZeU+0ztOqzpOuwqIpUhCu3byGngCt+8mV0O0vO/u3Bv5w==
+      integrity: sha512-ZWXCKhXALiZmWpY2YHYYrV0I3N4GLWJHi/qdrFGZdPvpLvtslizv8DQiH9LPKciLeV81TNTS2ZPueHUC6wIqIw==
       tarball: 'file:projects/ui.tgz'
     version: 0.0.0
   github.com/seokju-na/eslint/87a6f33f208f87d12a5219e1adf5a4e9be079863:
@@ -12287,6 +12297,7 @@ specifiers:
   style-loader: ~1.0.0
   ts-jest: ^24.1.0
   ts-loader: ~6.2.1
+  tsconfig-paths-webpack-plugin: ~3.2.0
   typescript: ~3.7.2
   uuid: ^3.3.3
   webpack: ~4.41.2

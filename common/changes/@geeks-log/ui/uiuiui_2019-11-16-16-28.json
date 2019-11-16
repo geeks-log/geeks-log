@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@geeks-log/ui",
+      "comment": "Let's get published",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@geeks-log/ui",
+  "email": "seokju.me@gmail.com"
+}

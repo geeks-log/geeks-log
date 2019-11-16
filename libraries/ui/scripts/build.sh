@@ -8,7 +8,10 @@ geeks-log-eslint -c .eslintrc.js 'src/**/*.{js,jsx,ts,tsx}'
 
 # Build
 rm -rf dist/
+rm -rf esm/
+
 tsc -p tsconfig.json
+tsc -p tsconfig.esm.json
 
 rollup -c --silent
 

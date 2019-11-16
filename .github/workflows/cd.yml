@@ -33,12 +33,6 @@ jobs:
       - name: Building
         run: |
           node common/scripts/install-run-rush.js rebuild --verbose
-      - name: Bump version (npm)
-        run: |
-          node common/scripts/install-run-rush.js version \
-          --bump \
-          --version-policy default \
-          --target-branch master
       - name: Publish (npm)
         run: |
           node common/scripts/install-run-rush.js publish \

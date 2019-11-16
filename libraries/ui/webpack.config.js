@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const PORT = process.env.PORT || 4200;
 const PROD = process.env.NODE_ENV === 'production';
@@ -50,6 +51,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'demo/index.html',
+    }),
+    new TsconfigPathsPlugin({
+      configFile: path.resolve(__dirname, 'tsconfig.demo.json'),
     }),
   ],
   devServer: {
