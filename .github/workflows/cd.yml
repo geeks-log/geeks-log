@@ -1,10 +1,10 @@
-name: CD
+name: Releases
 on:
   push:
     branches:
       - master
 jobs:
-  deploy:
+  release:
     if: "!contains(github.event.commits[0].message, '[skip]')"
     runs-on: ubuntu-latest
     steps:
