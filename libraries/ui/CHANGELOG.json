@@ -2,6 +2,21 @@
   "name": "@geeks-log/ui",
   "entries": [
     {
+      "version": "0.0.5",
+      "tag": "@geeks-log/ui_v0.0.5",
+      "date": "Sun, 17 Nov 2019 08:44:49 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@geeks-log/cdk\" from `0.0.4` to `0.0.5`"
+          },
+          {
+            "comment": "Updating dependency \"@geeks-log/cdk\" from `0.0.4` to `0.0.5`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.4",
       "tag": "@geeks-log/ui_v0.0.4",
       "date": "Sun, 17 Nov 2019 07:18:18 GMT",
