@@ -63,6 +63,7 @@ dependencies:
   fibers: 4.0.2
   html-webpack-plugin: 3.2.0
   immer: 5.0.0
+  intersection-observer: 0.7.0
   jest: 24.9.0
   jest-standard-reporter: 1.0.2
   lodash.isequal: 4.5.0
@@ -6349,6 +6350,10 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-mT34yGKMNceBQUoVn7iCDKDntA7SC6gycMAWzGx1z/CMCTV7b2AAtXlo3nRyHZ1FelRkQbQjprHSYGwzLtkVbw==
+  /intersection-observer/0.7.0:
+    dev: false
+    resolution:
+      integrity: sha512-Id0Fij0HsB/vKWGeBe9PxeY45ttRiBmhFyyt/geBdDHBYNctMRTE3dC1U3ujzz3lap+hVXlEcVaB56kZP/eEUg==
   /invariant/2.2.4:
     dependencies:
       loose-envify: 1.4.0
@@ -12142,6 +12147,7 @@ packages:
       emotion-theming: 10.0.19_75a3621563989c24c51854c3e0e71dec
       fibers: 4.0.2
       html-webpack-plugin: 3.2.0
+      intersection-observer: 0.7.0
       node-sass: 4.13.0
       react: 16.11.0
       react-dom: 16.11.0_react@16.11.0
@@ -12160,7 +12166,7 @@ packages:
     dev: false
     name: '@rush-temp/ui'
     resolution:
-      integrity: sha512-ZWXCKhXALiZmWpY2YHYYrV0I3N4GLWJHi/qdrFGZdPvpLvtslizv8DQiH9LPKciLeV81TNTS2ZPueHUC6wIqIw==
+      integrity: sha512-5ETxDzjO8fU1W0Ojne9nt/Mc6wC1bXRaZhiErxIPKmXlBQDXJmq9eDZWrj2pEMwfD9fW/dke2SFFV0pbo5CC2w==
       tarball: 'file:projects/ui.tgz'
     version: 0.0.0
   github.com/seokju-na/eslint/87a6f33f208f87d12a5219e1adf5a4e9be079863:
@@ -12277,6 +12283,7 @@ specifiers:
   fibers: ~4.0.2
   html-webpack-plugin: ~3.2.0
   immer: ^5.0.0
+  intersection-observer: ~0.7.0
   jest: ^24.9.0
   jest-standard-reporter: ^1.0.2
   lodash.isequal: ^4.5.0

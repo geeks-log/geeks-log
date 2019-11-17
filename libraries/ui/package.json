@@ -5,6 +5,10 @@
   "main": "dist/index.js",
   "module": "esm/index.js",
   "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seokju-na/geeks-log/tree/master/libraries/ui"
+  },
   "files": [
     "dist/",
     "esm/",

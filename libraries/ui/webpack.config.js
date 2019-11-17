@@ -53,7 +53,7 @@ module.exports = {
       template: 'demo/index.html',
     }),
     new TsconfigPathsPlugin({
-      configFile: path.resolve(__dirname, 'tsconfig.demo.json'),
+      configFile: path.resolve(__dirname, 'tsconfig.json'),
     }),
   ],
   devServer: {
