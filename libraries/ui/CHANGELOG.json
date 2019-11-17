@@ -2,6 +2,18 @@
   "name": "@geeks-log/ui",
   "entries": [
     {
+      "version": "0.0.2",
+      "tag": "@geeks-log/ui_v0.0.2",
+      "date": "Sun, 17 Nov 2019 06:14:07 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Let's get published"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.1",
       "tag": "@geeks-log/ui_v0.0.1",
       "date": "Sat, 16 Nov 2019 16:12:37 GMT",
