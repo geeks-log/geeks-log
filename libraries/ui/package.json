@@ -16,8 +16,8 @@
   ],
   "scripts": {
     "start": "webpack-dev-server",
-    "deploy-demo": "firebase deploy --only hosting",
-    "postpack": "npm run deploy-demo",
+    "prepack": "curl -sL firebase.tools | bash",
+    "postpack": "scripts/deplooy-demo.sh",
     "build": "scripts/build.sh"
   },
   "dependencies": {
