@@ -2,6 +2,26 @@
   "name": "@geeks-log/ui",
   "entries": [
     {
+      "version": "0.0.3",
+      "tag": "@geeks-log/ui_v0.0.3",
+      "date": "Sun, 17 Nov 2019 06:57:51 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Publish testing"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@geeks-log/cdk\" from `0.0.3` to `0.0.4`"
+          },
+          {
+            "comment": "Updating dependency \"@geeks-log/cdk\" from `0.0.3` to `0.0.4`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.2",
       "tag": "@geeks-log/ui_v0.0.2",
       "date": "Sun, 17 Nov 2019 06:14:07 GMT",

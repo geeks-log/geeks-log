@@ -2,6 +2,18 @@
   "name": "@geeks-log/cdk",
   "entries": [
     {
+      "version": "0.0.4",
+      "tag": "@geeks-log/cdk_v0.0.4",
+      "date": "Sun, 17 Nov 2019 06:57:51 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix missing dependency"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.3",
       "tag": "@geeks-log/cdk_v0.0.3",
       "date": "Sat, 16 Nov 2019 14:50:20 GMT",

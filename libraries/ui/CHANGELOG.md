@@ -1,6 +1,13 @@
 # Change Log - @geeks-log/ui
 
-This log was last generated on Sun, 17 Nov 2019 06:14:07 GMT and should not be manually modified.
+This log was last generated on Sun, 17 Nov 2019 06:57:51 GMT and should not be manually modified.
+
+## 0.0.3
+Sun, 17 Nov 2019 06:57:51 GMT
+
+### Patches
+
+- Publish testing
 
 ## 0.0.2
 Sun, 17 Nov 2019 06:14:07 GMT
