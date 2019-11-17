@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@geeks-log/cdk",
+      "comment": "Update license",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@geeks-log/cdk",
+  "email": "seokju.me@gmail.com"
+}
