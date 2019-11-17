@@ -5,7 +5,7 @@ Blog platform for geeks.
 > In-Development
 
 
-## Package overview
+## Packages overview
 
 ### Services
 
