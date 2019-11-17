@@ -2,6 +2,18 @@
   "name": "@geeks-log/ui",
   "entries": [
     {
+      "version": "0.0.4",
+      "tag": "@geeks-log/ui_v0.0.4",
+      "date": "Sun, 17 Nov 2019 07:18:18 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix dem app deploy"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.3",
       "tag": "@geeks-log/ui_v0.0.3",
       "date": "Sun, 17 Nov 2019 06:57:51 GMT",
