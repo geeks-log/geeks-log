@@ -1,5 +1,6 @@
 # Geek's Log
 
+[![CI Status Badge](https://github.com/seokju-na/geeks-log/workflows/Builds/badge.svg)](https://github.com/seokju-na/geeks-log/actions?query=workflow%3ABuilds)
 [![CD Status Badge](https://github.com/seokju-na/geeks-log/workflows/Releases/badge.svg)](https://github.com/seokju-na/geeks-log/actions?query=workflow%3AReleases)
 
 Blog platform for geeks.
