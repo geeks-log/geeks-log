@@ -1,5 +1,7 @@
 # Geek's Log
 
+![CD Status Badge](https://github.com/seokju-na/geeks-log/workflows/CD/badge.svg)
+
 Blog platform for geeks.
 
 > In-Development
