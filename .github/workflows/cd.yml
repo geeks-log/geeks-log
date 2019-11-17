@@ -37,6 +37,7 @@ jobs:
         run: |
           node common/scripts/install-run-rush.js version \
           --target-branch master \
+          --version-policy default \
           --bump
       - name: Publish
         run: |
