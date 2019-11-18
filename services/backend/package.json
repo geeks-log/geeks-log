@@ -5,7 +5,7 @@
     "build": ""
   },
   "dependencies": {
-    "@geeks-log/event-system": "0.0.0",
+    "@geeks-log/event-system": "1.0.0",
     "@geeks-log/note-diff": "0.0.0",
     "@nestjs/common": "^6.9.0",
     "@nestjs/core": "^6.9.0",
