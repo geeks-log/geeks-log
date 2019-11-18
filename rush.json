@@ -53,7 +53,7 @@
       "packageName": "@geeks-log/event-system",
       "projectFolder": "libraries/event-system",
       "reviewCategory": "libraries",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/typescript",

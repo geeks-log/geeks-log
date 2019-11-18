@@ -1,9 +1,16 @@
 {
   "name": "@geeks-log/event-system",
   "version": "0.0.0",
+  "description": "Event system utilities for Event-Sourcing, Redux-like systems etc.",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "esm/",
+    "package.json"
+  ],
   "scripts": {
     "build": "scripts/build.sh"
   },

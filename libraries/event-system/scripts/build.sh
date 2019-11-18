@@ -10,5 +10,5 @@ jest --reporters="jest-standard-reporter"
 rm -rf dist/
 rm -rf esm/
 
-tsc -p tsconfig.build.json
+tsc -p tsconfig.json
 tsc -p tsconfig.esm.json
