@@ -2,6 +2,18 @@
   "name": "@geeks-log/ui",
   "entries": [
     {
+      "version": "0.0.7",
+      "tag": "@geeks-log/ui_v0.0.7",
+      "date": "Sat, 30 Nov 2019 09:44:13 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Toss 짱"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.6",
       "tag": "@geeks-log/ui_v0.0.6",
       "date": "Sun, 17 Nov 2019 10:30:01 GMT",
