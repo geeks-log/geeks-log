@@ -1,12 +1,14 @@
 import React from 'react';
-import { Button, Spinner } from '../src';
+import { Button, defaultLightTheme, GeeksLogUIProvider, Spinner } from '../src';
 
 export default function Demo() {
   return (
-    <main>
-      <h1>Hello World!</h1>
-      <Button>Button</Button>
-      <Spinner />
-    </main>
+    <GeeksLogUIProvider theme={defaultLightTheme}>
+      <main>
+        <h1>Hello World!</h1>
+        <Button>Button</Button>
+        <Spinner />
+      </main>
+    </GeeksLogUIProvider>
   );
 }

@@ -56,6 +56,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@geeks-log/testing",
+      "projectFolder": "libraries/testing",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@geeks-log/typescript",
       "projectFolder": "tools/typescript",
       "reviewCategory": "tools",

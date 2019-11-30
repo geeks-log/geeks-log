@@ -1,0 +1,51 @@
+{
+  "name": "@geeks-log/testing",
+  "version": "0.0.0",
+  "description": "Testing library for geeks log projects.",
+  "scripts": {
+    "build": "scripts/build.sh",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/faker": "~4.1.8",
+    "@types/jest": "^24.0.22",
+    "date-fns": "~2.8.1"
+  },
+  "peerDependencies": {
+    "faker": "~4.1.0",
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {
+    "@geeks-log/eslint": "0.0.1",
+    "@geeks-log/typescript": "0.0.0",
+    "faker": "~4.1.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "~3.7.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "test/",
+    "testRegex": ".spec.ts$",
+    "moduleDirectories": [
+      "node_modules/",
+      "src/"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setups.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "packageJson": "package.json",
+        "tsConfig": "tsconfig.spec.json"
+      }
+    }
+  }
+}
