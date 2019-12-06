@@ -7,11 +7,7 @@
   "scripts": {
     "build": ""
   },
-  "files": [
-    "package.json",
-    "tsconfig.json",
-    "types/"
-  ],
+  "private": true,
   "devDependencies": {
     "@geeks-log/eslint": "0.0.1"
   }

@@ -1,7 +1,7 @@
 # Geek's Log
 
-[![CI Status Badge](https://github.com/seokju-na/geeks-log/workflows/Builds/badge.svg)](https://github.com/seokju-na/geeks-log/actions?query=workflow%3ABuilds)
-[![CD Status Badge](https://github.com/seokju-na/geeks-log/workflows/Releases/badge.svg)](https://github.com/seokju-na/geeks-log/actions?query=workflow%3AReleases)
+[![CI Status Badge](https://github.com/geeks-log/geeks-log/workflows/Builds/badge.svg)](https://github.com/geeks-log/geeks-log/actions?query=workflow%3ABuilds)
+[![CD Status Badge](https://github.com/geeks-log/geeks-log/workflows/Releases/badge.svg)](https://github.com/geeks-log/geeks-log/actions?query=workflow%3AReleases)
 
 Blog platform for geeks.
 
@@ -19,12 +19,12 @@ Blog platform for geeks.
 
 ### Libraries
 
-| Name                    | Version                                                                                                                          | Changelog                                          | Directory                                            |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------- |
-| @geeks-log/cdk          | [![npm version](https://badge.fury.io/js/%40geeks-log%2Fcdk.svg)](https://badge.fury.io/js/%40geeks-log%2Fcdk)                   | [changelog](./libraries/cdk/CHANGELOG.md)          | [/libraries/cdk](./libraries/cdk/)                   |
-| @geeks-log/event-system | [![npm version](https://badge.fury.io/js/%40geeks-log%2Fevent-system.svg)](https://badge.fury.io/js/%40geeks-log%2Fevent-system) | [changelog](./libraries/event-system/CHANGELOG.md) | [/libraries/event-system](./libraries/event-system/) |
-| @geeks-log/note-diff    | IN-DEVELOPMENT                                                                                                                   | IN-DEVELOPMENT                                     | [/libraries/note-diff](./libraries/note-diff/)       |
-| @geeks-log/ui           | [![npm version](https://badge.fury.io/js/%40geeks-log%2Fui.svg)](https://badge.fury.io/js/%40geeks-log%2Fui)                     | [changelog](./libraries/ui/CHANGELOG.md)           | [/libraries/ui](./libraries/ui/)                     |
+| Name                    | Version        | Changelog                                          | Directory                                            |
+| ----------------------- | -------------- | -------------------------------------------------- | ---------------------------------------------------- |
+| @geeks-log/cdk          |                | [changelog](./libraries/cdk/CHANGELOG.md)          | [/libraries/cdk](./libraries/cdk/)                   |
+| @geeks-log/event-system |                | [changelog](./libraries/event-system/CHANGELOG.md) | [/libraries/event-system](./libraries/event-system/) |
+| @geeks-log/note-diff    | IN-DEVELOPMENT | IN-DEVELOPMENT                                     | [/libraries/note-diff](./libraries/note-diff/)       |
+| @geeks-log/ui           |                | [changelog](./libraries/ui/CHANGELOG.md)           | [/libraries/ui](./libraries/ui/)                     |
 
 ### Tools
 
