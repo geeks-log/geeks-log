@@ -8,8 +8,9 @@
     "directory": "libraries/testing"
   },
   "scripts": {
-    "build": "scripts/build.sh",
-    "test": "jest"
+    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.build.json && tsc -p tsconfig.esm.json",
+    "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'",
+    "test": "npm run lint && tsc --noEmit && jest --reporters=jest-standard-reporter"
   },
   "dependencies": {
     "@types/faker": "~4.1.8",

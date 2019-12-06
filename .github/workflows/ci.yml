@@ -20,4 +20,7 @@ jobs:
           node common/scripts/install-run-rush.js install
       - name: Building
         run: |
-          node common/scripts/install-run-rush.js rebuild --verbose
+          node common/scripts/install-run-rush.js rebuild
+      - name: Test
+        run: |
+          node common/scripts/install-run-rush.js test

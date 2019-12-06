@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": ""
+    "build": "",
+    "lint": "",
+    "test": ""
   },
   "dependencies": {
     "@geeks-log/event-system": "1.0.1",

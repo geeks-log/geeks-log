@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "private": true,
   "scripts": {
-    "build": "npm run test",
+    "build": "",
+    "lint": "",
     "test": "node test/index.test.js"
   },
   "devDependencies": {
