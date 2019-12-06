@@ -45,6 +45,6 @@ jobs:
           --add-commit-details \
           --set-access-level public \
           --registry https://npm.pkg.github.com/geeks-log \
-          --npm-auth-token {{secrets.GITHUB_TOKEN}}
+          --npm-auth-token {{secrets.GITHUB_PUBLISH_TOKEN}}
         env:
           FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
