@@ -4,6 +4,11 @@
   "main": "dist/index.js",
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geeks-log/geeks-log.git",
+    "directory": "libraries/note-diff"
+  },
   "scripts": {
     "build": "scripts/build.sh"
   },

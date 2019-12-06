@@ -4,10 +4,7 @@
   "bin": {
     "geeks-log-eslint": "bin/eslint"
   },
-  "files": [
-    "bin/",
-    "configs/"
-  ],
+  "private": true,
   "scripts": {
     "build": "npm run test",
     "test": "bin/eslint -c .eslintrc.js 'test/**/*.{js,jsx,ts,tsx}'"

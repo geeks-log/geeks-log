@@ -11,6 +11,11 @@
     "esm/",
     "package.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geeks-log/geeks-log.git",
+    "directory": "libraries/event-system"
+  },
   "scripts": {
     "build": "scripts/build.sh"
   },

@@ -2,6 +2,7 @@
   "name": "@geeks-log/babel",
   "version": "0.0.0",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "",
     "ci": ""

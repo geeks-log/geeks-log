@@ -2,6 +2,11 @@
   "name": "@geeks-log/testing",
   "version": "0.0.0",
   "description": "Testing library for geeks log projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geeks-log/geeks-log.git",
+    "directory": "libraries/testing"
+  },
   "scripts": {
     "build": "scripts/build.sh",
     "test": "jest"

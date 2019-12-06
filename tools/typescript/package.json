@@ -1,10 +1,7 @@
 {
   "name": "@geeks-log/typescript",
   "version": "0.0.0",
-  "files": [
-    "bin/",
-    "configs/"
-  ],
+  "private": true,
   "scripts": {
     "build": ""
   }
