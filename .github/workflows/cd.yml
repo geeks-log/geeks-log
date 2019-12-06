@@ -20,7 +20,7 @@ jobs:
       - name: Checking for missing change logs
         run: |
           set -e
-          git remote set-url origin https://seokju-na:${{secrets.GITHUB_PUBLISH_TOKEN}}@github.com/seokju-na/geeks-log
+          git remote set-url origin https://seokju-na:${{secrets.GITHUB_AUTH_TOKEN}}@github.com/geeks-log/geeks-log
           git fetch origin master:refs/remotes/origin/master -a
           node common/scripts/install-run-rush.js change -v
       - name: Installing
@@ -37,13 +37,14 @@ jobs:
           --bump
       - name: Publish
         run: |
+          echo "//registry.npmjs.org/:_authToken=${{secrets.GITHUB_TOKEN}}" > ~/.npmrc
+          npm config set @geeks-log:registry https://npm.pkg.github.com
           node common/scripts/install-run-rush.js publish \
           --apply \
           --publish \
           --target-branch master \
           --include-all \
           --add-commit-details \
-          --set-access-level public \
-          --npm-auth-token ${{secrets.NPM_TOKEN}}
+          --set-access-level public
         env:
           FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
