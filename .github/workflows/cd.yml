@@ -37,7 +37,8 @@ jobs:
           --bump
       - name: Publish
         run: |
-          echo "//registry.npmjs.org/:_authToken=${{secrets.GITHUB_PUBLISH_TOKEN}}" > ~/.npmrc
+          npm set //npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}
+          npm config set @geeks-log:registry https://npm.pkg.github.com
           node common/scripts/install-run-rush.js publish \
           --apply \
           --publish \
