@@ -1,6 +1,6 @@
 {
   "name": "@geeks-log/cdk",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Component development kit for react.",
   "main": "dist/index.js",
   "module": "esm/index.js",

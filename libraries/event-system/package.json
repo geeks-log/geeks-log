@@ -1,6 +1,6 @@
 {
   "name": "@geeks-log/event-system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Event system utilities for Event-Sourcing, Redux-like systems etc.",
   "main": "dist/index.js",
   "module": "esm/index.js",
