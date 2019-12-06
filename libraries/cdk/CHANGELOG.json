@@ -2,6 +2,18 @@
   "name": "@geeks-log/cdk",
   "entries": [
     {
+      "version": "0.0.7",
+      "tag": "@geeks-log/cdk_v0.0.7",
+      "date": "Fri, 06 Dec 2019 16:44:22 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update test script"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.6",
       "tag": "@geeks-log/cdk_v0.0.6",
       "date": "Fri, 06 Dec 2019 12:09:28 GMT",

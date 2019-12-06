@@ -1,6 +1,13 @@
 # Change Log - @geeks-log/event-system
 
-This log was last generated on Fri, 06 Dec 2019 12:09:28 GMT and should not be manually modified.
+This log was last generated on Fri, 06 Dec 2019 16:44:22 GMT and should not be manually modified.
+
+## 1.0.2
+Fri, 06 Dec 2019 16:44:22 GMT
+
+### Patches
+
+- Update test script
 
 ## 1.0.1
 Fri, 06 Dec 2019 12:09:28 GMT

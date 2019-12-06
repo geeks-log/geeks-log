@@ -2,6 +2,18 @@
   "name": "@geeks-log/event-system",
   "entries": [
     {
+      "version": "1.0.2",
+      "tag": "@geeks-log/event-system_v1.0.2",
+      "date": "Fri, 06 Dec 2019 16:44:22 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update test script"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.1",
       "tag": "@geeks-log/event-system_v1.0.1",
       "date": "Fri, 06 Dec 2019 12:09:28 GMT",
