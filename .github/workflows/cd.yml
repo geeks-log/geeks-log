@@ -28,7 +28,7 @@ jobs:
           node common/scripts/install-run-rush.js install
       - name: Building
         run: |
-          node common/scripts/install-run-rush.js rebuild --verbose
+          node common/scripts/install-run-rush.js rebuild
       - name: Version Bump
         run: |
           node common/scripts/install-run-rush.js version \
