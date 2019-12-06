@@ -18,9 +18,9 @@ jobs:
       - name: Installing
         run: |
           node common/scripts/install-run-rush.js install
-      - name: Test
-        run: |
-          node common/scripts/install-run-rush.js test
       - name: Building
         run: |
           node common/scripts/install-run-rush.js rebuild
+      - name: Test
+        run: |
+          node common/scripts/install-run-rush.js test
