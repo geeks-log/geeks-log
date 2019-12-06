@@ -2,6 +2,18 @@
   "name": "@geeks-log/event-system",
   "entries": [
     {
+      "version": "1.0.1",
+      "tag": "@geeks-log/event-system_v1.0.1",
+      "date": "Fri, 06 Dec 2019 12:09:28 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Migrate repository to 'geeks-log/geeks-log' from 'seokju-na/geeks-log'."
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.0",
       "tag": "@geeks-log/event-system_v1.0.0",
       "date": "Mon, 18 Nov 2019 14:36:38 GMT",

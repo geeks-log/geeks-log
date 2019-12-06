@@ -1,6 +1,13 @@
 # Change Log - @geeks-log/cdk
 
-This log was last generated on Sun, 17 Nov 2019 08:44:49 GMT and should not be manually modified.
+This log was last generated on Fri, 06 Dec 2019 12:09:28 GMT and should not be manually modified.
+
+## 0.0.6
+Fri, 06 Dec 2019 12:09:28 GMT
+
+### Patches
+
+- Migrate repository to 'geeks-log/geeks-log' from 'seokju-na/geeks-log'. 
 
 ## 0.0.5
 Sun, 17 Nov 2019 08:44:49 GMT

@@ -2,6 +2,18 @@
   "name": "@geeks-log/cdk",
   "entries": [
     {
+      "version": "0.0.6",
+      "tag": "@geeks-log/cdk_v0.0.6",
+      "date": "Fri, 06 Dec 2019 12:09:28 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Migrate repository to 'geeks-log/geeks-log' from 'seokju-na/geeks-log'. "
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.5",
       "tag": "@geeks-log/cdk_v0.0.5",
       "date": "Sun, 17 Nov 2019 08:44:49 GMT",

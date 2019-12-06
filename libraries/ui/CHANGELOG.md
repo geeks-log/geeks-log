@@ -1,6 +1,13 @@
 # Change Log - @geeks-log/ui
 
-This log was last generated on Sat, 30 Nov 2019 09:44:13 GMT and should not be manually modified.
+This log was last generated on Fri, 06 Dec 2019 12:09:28 GMT and should not be manually modified.
+
+## 0.0.8
+Fri, 06 Dec 2019 12:09:28 GMT
+
+### Patches
+
+- Migrate repository to 'geeks-log/geeks-log' from 'seokju-na/geeks-log'.
 
 ## 0.0.7
 Sat, 30 Nov 2019 09:44:13 GMT
