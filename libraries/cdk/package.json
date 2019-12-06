@@ -7,7 +7,10 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "scripts/build.sh"
+    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.build.json && tsc -p tsconfig.esm.json && npm run bundle-style",
+    "bundle-style": "rollup -c --silent",
+    "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.{js,jsx,ts,tsx}'",
+    "test": "npm run lint && tsc --noEmit && jest --reporters=jest-standard-reporter"
   },
   "repository": {
     "type": "git",

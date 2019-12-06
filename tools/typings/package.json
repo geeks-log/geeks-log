@@ -5,7 +5,9 @@
   "types": "types/",
   "license": "MIT",
   "scripts": {
-    "build": ""
+    "build": "",
+    "lint": "",
+    "test": ""
   },
   "private": true,
   "devDependencies": {

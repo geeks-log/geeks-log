@@ -10,7 +10,9 @@
     "directory": "libraries/note-diff"
   },
   "scripts": {
-    "build": "scripts/build.sh"
+    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.build.json && tsc -p tsconfig.esm.json",
+    "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'",
+    "test": "npm run lint && tsc --noEmit && jest --reporters=jest-standard-reporter"
   },
   "dependencies": {
     "diff_match_patch": "^0.1.1",

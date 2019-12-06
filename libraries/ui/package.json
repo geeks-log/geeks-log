@@ -19,7 +19,9 @@
     "start": "webpack-dev-server",
     "prepack": "curl -sL firebase.tools | bash",
     "postpack": "scripts/deplooy-demo.sh",
-    "build": "scripts/build.sh"
+    "build": "scripts/build.sh",
+    "lint": "geeks-log-eslint -c .eslintrc.js '{src,demo}/**/*.{js,jsx,ts,tsx}'",
+    "test": "npm run lint && tsc --noEmit"
   },
   "dependencies": {
     "@emotion/core": "~10.0.22",

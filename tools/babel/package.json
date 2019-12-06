@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "",
-    "ci": ""
+    "lint": "",
+    "test": "cd test/ && babel fixture.ts --out-file fixture.js --quiet"
   },
   "dependencies": {
     "@babel/core": "~7.7.2",
@@ -18,5 +19,10 @@
     "@babel/preset-typescript": "~7.7.2",
     "@emotion/babel-preset-css-prop": "~10.0.23",
     "babel-plugin-emotion": "~10.0.23"
+  },
+  "devDependencies": {
+    "@babel/cli": "~7.7.5",
+    "@geeks-log/typescript": "0.0.0",
+    "typescript": "~3.7.2"
   }
 }
