@@ -56,6 +56,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@geeks-log/docker-publisher",
+      "projectFolder": "libraries/docker-publisher",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@geeks-log/testing",
       "projectFolder": "libraries/testing",
       "reviewCategory": "libraries",

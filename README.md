@@ -19,12 +19,13 @@ Blog platform for geeks.
 
 ### Libraries
 
-| Name                    | Version        | Changelog                                          | Directory                                            |
-| ----------------------- | -------------- | -------------------------------------------------- | ---------------------------------------------------- |
-| @geeks-log/cdk          |                | [changelog](./libraries/cdk/CHANGELOG.md)          | [/libraries/cdk](./libraries/cdk/)                   |
-| @geeks-log/event-system |                | [changelog](./libraries/event-system/CHANGELOG.md) | [/libraries/event-system](./libraries/event-system/) |
-| @geeks-log/note-diff    | IN-DEVELOPMENT | IN-DEVELOPMENT                                     | [/libraries/note-diff](./libraries/note-diff/)       |
-| @geeks-log/ui           |                | [changelog](./libraries/ui/CHANGELOG.md)           | [/libraries/ui](./libraries/ui/)                     |
+| Name                        | Version        | Changelog                                          | Directory                                                    |
+| --------------------------- | -------------- | -------------------------------------------------- | ------------------------------------------------------------ |
+| @geeks-log/cdk              |                | [changelog](./libraries/cdk/CHANGELOG.md)          | [/libraries/cdk](./libraries/cdk/)                           |
+| @geeks-log/event-system     |                | [changelog](./libraries/event-system/CHANGELOG.md) | [/libraries/event-system](./libraries/event-system/)         |
+| @geeks-log/note-diff        | IN-DEVELOPMENT | IN-DEVELOPMENT                                     | [/libraries/note-diff](./libraries/note-diff/)               |
+| @geeks-log/ui               |                | [changelog](./libraries/ui/CHANGELOG.md)           | [/libraries/ui](./libraries/ui/)                             |
+| @geeks-log/docker-publisher | Local package  | -                                                  | [/libraries/docker-publisher](./libraries/docker-publisher/) |
 
 ### Tools
 

@@ -20,6 +20,7 @@ dependencies:
   '@rush-temp/babel': 'file:projects/babel.tgz'
   '@rush-temp/backend': 'file:projects/backend.tgz'
   '@rush-temp/cdk': 'file:projects/cdk.tgz'
+  '@rush-temp/docker-publisher': 'file:projects/docker-publisher.tgz'
   '@rush-temp/eslint': 'file:projects/eslint.tgz'
   '@rush-temp/eslint-plugin': 'file:projects/eslint-plugin.tgz'
   '@rush-temp/event-system': 'file:projects/event-system.tgz'
@@ -46,6 +47,7 @@ dependencies:
   '@typescript-eslint/parser': 2.6.1
   ajv: 6.10.2
   autoprefixer: 9.7.3
+  axios: 0.19.0
   babel-eslint: 10.0.3
   babel-loader: 8.0.6
   babel-plugin-emotion: 10.0.23
@@ -64,14 +66,17 @@ dependencies:
   eslint-plugin-react: 7.17.0
   eslint-plugin-react-hooks: 2.3.0
   event-store-client: 1.1.0
+  execa: 3.4.0
   faker: 4.1.0
   fibers: 4.0.2
+  graphql-request: 1.8.2
   html-webpack-plugin: 3.2.0
   immer: 5.0.0
   intersection-observer: 0.7.0
   jest: 24.9.0
   jest-standard-reporter: 1.0.2
   lodash.isequal: 4.5.0
+  moxios: 0.4.0
   node-sass: 4.13.0
   passport: 0.4.0
   passport-jwt: 4.0.0
@@ -2521,6 +2526,7 @@ packages:
       functional-red-black-tree: 1.0.1
       regexpp: 2.0.1
       tsutils: 3.17.1_typescript@3.7.3
+      typescript: 3.7.3
     dev: false
     engines:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
@@ -4106,6 +4112,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MJG9liiZ+ogc4TzUwuvbER1JRdgvUFSB5+VR/g5h82fGaIRWMWddtKBHi7/sVhfjQZ6SehlyhvQYrcYkaUIpLg==
+  /cross-fetch/2.2.2:
+    dependencies:
+      node-fetch: 2.1.2
+      whatwg-fetch: 2.0.4
+    dev: false
+    resolution:
+      integrity: sha1-pH/09/xxLauo9qaVoRyUhEDUVyM=
   /cross-spawn/3.0.1:
     dependencies:
       lru-cache: 4.1.5
@@ -4207,7 +4220,7 @@ packages:
       postcss-modules-values: 3.0.0
       postcss-value-parser: 4.0.2
       schema-utils: 2.6.1
-      webpack: 4.41.2
+      webpack: 4.41.2_webpack@4.41.2
     dev: false
     engines:
       node: '>= 8.9.0'
@@ -6012,6 +6025,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
+  /graphql-request/1.8.2:
+    dependencies:
+      cross-fetch: 2.2.2
+    dev: false
+    resolution:
+      integrity: sha512-dDX2M+VMsxXFCmUX0Vo0TopIZIX4ggzOtiCsThgtrKR4niiaagsGTDIHj3fsOMFETpa064vzovI+4YV4QnMbcg==
   /growly/1.3.0:
     dev: false
     resolution:
@@ -8089,6 +8108,20 @@ packages:
     dev: false
     resolution:
       integrity: sha1-viwAX9oy4LKa8fBdfEszIUxwH5I=
+  /moxios/0.4.0:
+    dev: false
+    peerDependencies:
+      axios: '>= 0.13.0'
+    resolution:
+      integrity: sha1-/A2ixlR31yXKa5Z51YNw7QxS9Ts=
+  /moxios/0.4.0_axios@0.19.0:
+    dependencies:
+      axios: 0.19.0
+    dev: false
+    peerDependencies:
+      axios: '>= 0.13.0'
+    resolution:
+      integrity: sha1-/A2ixlR31yXKa5Z51YNw7QxS9Ts=
   /mri/1.1.4:
     dev: false
     engines:
@@ -8188,6 +8221,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==
+  /node-fetch/2.1.2:
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    resolution:
+      integrity: sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
   /node-fetch/2.6.0:
     dev: false
     engines:
@@ -10292,7 +10331,7 @@ packages:
       sass: 1.23.7
       schema-utils: 2.6.1
       semver: 6.3.0
-      webpack: 4.41.2
+      webpack: 4.41.2_webpack@4.41.2
     dev: false
     engines:
       node: '>= 8.9.0'
@@ -10968,7 +11007,7 @@ packages:
     dependencies:
       loader-utils: 1.2.3
       schema-utils: 2.6.1
-      webpack: 4.41.2
+      webpack: 4.41.2_webpack@4.41.2
     dev: false
     engines:
       node: '>= 8.9.0'
@@ -11357,6 +11396,7 @@ packages:
       micromatch: 4.0.2
       semver: 6.3.0
       typescript: 3.7.3
+      webpack: 4.41.2_webpack@4.41.2
     dev: false
     engines:
       node: '>=8.6'
@@ -11756,7 +11796,7 @@ packages:
       loader-utils: 1.2.3
       supports-color: 6.1.0
       v8-compile-cache: 2.0.3
-      webpack: 4.41.2
+      webpack: 4.41.2_webpack@4.41.2
       yargs: 13.2.4
     dev: false
     engines:
@@ -11772,7 +11812,7 @@ packages:
       mime: 2.4.4
       mkdirp: 0.5.1
       range-parser: 1.2.1
-      webpack: 4.41.2
+      webpack: 4.41.2_webpack@4.41.2
       webpack-log: 2.0.0
     dev: false
     engines:
@@ -11812,7 +11852,7 @@ packages:
       strip-ansi: 3.0.1
       supports-color: 6.1.0
       url: 0.11.0
-      webpack: 4.41.2
+      webpack: 4.41.2_webpack@4.41.2
       webpack-dev-middleware: 3.7.2_webpack@4.41.2
       webpack-log: 2.0.0
       ws: 6.2.1
@@ -11900,6 +11940,7 @@ packages:
       tapable: 1.1.3
       terser-webpack-plugin: 1.4.2_webpack@4.41.2
       watchpack: 1.6.0
+      webpack: 4.41.2_webpack@4.41.2
       webpack-sources: 1.4.3
     dev: false
     engines:
@@ -11931,6 +11972,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-b5lim54JOPN9HtzvK9HFXvBma/rnfFeqsic0hSpjtDbVxR3dJKLc+KB4V6GgiGOvl7CY/KNh8rxSo9DKQrnUEw==
+  /whatwg-fetch/2.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng==
   /whatwg-mimetype/2.3.0:
     dev: false
     resolution:
@@ -12208,10 +12253,11 @@ packages:
       '@babel/preset-typescript': 7.7.4_@babel+core@7.7.5
       '@emotion/babel-preset-css-prop': 10.0.23_@babel+core@7.7.5
       babel-plugin-emotion: 10.0.23
+      typescript: 3.7.3
     dev: false
     name: '@rush-temp/babel'
     resolution:
-      integrity: sha512-aDNml8Ij1+ksssHVCvtHToXWDFFo5gL2bUcUAHK20MLv+OAQEv1HTILvAZIWI5orBLjJawg7Wm1Roslri8ReMw==
+      integrity: sha512-jacMVnF9NkwU98VRC5GiyKsQhffNDsZ3Q530bFeZBYZ2PxdLQOHbXl/3dTLDy/YpRuEIutBzuLRVEiI4lzy0pg==
       tarball: 'file:projects/babel.tgz'
     version: 0.0.0
   'file:projects/backend.tgz':
@@ -12243,13 +12289,13 @@ packages:
       ts-loader: 6.2.1_typescript@3.7.2
       typescript: 3.7.3
       uuid: 3.3.3
-      webpack: 4.41.2
+      webpack: 4.41.2_webpack@4.41.2
       webpack-cli: 3.3.10_webpack@4.41.2
       webpack-node-externals: 1.7.2
     dev: false
     name: '@rush-temp/backend'
     resolution:
-      integrity: sha512-HU4k/OfY55nVK0iZQCBMEwTppK/wUsjW887DS04XA0NiWXe4Kk9fVfaQ2Ce0gXcp6AJRMk6OIpYRPmnWWhmfZA==
+      integrity: sha512-F1qsEpoPnfyfLqfdW7pvkANNMbpWSxT/HH1Yu5q9qBrWR4WCs54H1PyG0xE6M+GcACfcVHm8U4J8dqebQkofqw==
       tarball: 'file:projects/backend.tgz'
     version: 0.0.0
   'file:projects/cdk.tgz':
@@ -12278,6 +12324,23 @@ packages:
     resolution:
       integrity: sha512-LqFuqrFL86cFsT8dznoSW8XcbzqxsQe6mt4cvR88CKfbcOyJEFEONugoKD6XO0Voiy6f+WwFOgvNr1lDCtBOpA==
       tarball: 'file:projects/cdk.tgz'
+    version: 0.0.0
+  'file:projects/docker-publisher.tgz':
+    dependencies:
+      '@types/jest': 24.0.23
+      '@types/node': 10.17.6
+      axios: 0.19.0
+      execa: 3.4.0
+      graphql-request: 1.8.2
+      jest: 24.9.0
+      moxios: 0.4.0_axios@0.19.0
+      ts-jest: 24.2.0_jest@24.9.0
+      typescript: 3.7.3
+    dev: false
+    name: '@rush-temp/docker-publisher'
+    resolution:
+      integrity: sha512-QpL90FB2WHxIayT8jOIP6kD0FLAFzSFHDcX8RfZ6L/QS0xz04uuz8gRh/B8zMtuADwEOyfeS55jvo7CwUiyY4A==
+      tarball: 'file:projects/docker-publisher.tgz'
     version: 0.0.0
   'file:projects/eslint-plugin.tgz':
     dependencies:
@@ -12395,13 +12458,13 @@ packages:
       ts-loader: 6.2.1_typescript@3.7.3
       tsconfig-paths-webpack-plugin: 3.2.0
       typescript: 3.7.3
-      webpack: 4.41.2
+      webpack: 4.41.2_webpack@4.41.2
       webpack-cli: 3.3.10_webpack@4.41.2
       webpack-dev-server: 3.9.0
     dev: false
     name: '@rush-temp/ui'
     resolution:
-      integrity: sha512-j2iGQWejI03rzy15mPxTBdrdPTRO3N2Ux3SLn15bCKAIk1fAUYQpdZOQtmCKUrTzl8IVlC2Q9cnSuFVOrByVhg==
+      integrity: sha512-GaJIUThnM2joLFiQW9q5E6KRTXcqYcfhpnVRN8/3XTTn23VJJB67cLxk/wmqFob0rtuw4j4oQRcho8+8M0w2Hg==
       tarball: 'file:projects/ui.tgz'
     version: 0.0.0
 registry: ''
@@ -12427,6 +12490,7 @@ specifiers:
   '@rush-temp/babel': 'file:./projects/babel.tgz'
   '@rush-temp/backend': 'file:./projects/backend.tgz'
   '@rush-temp/cdk': 'file:./projects/cdk.tgz'
+  '@rush-temp/docker-publisher': 'file:./projects/docker-publisher.tgz'
   '@rush-temp/eslint': 'file:./projects/eslint.tgz'
   '@rush-temp/eslint-plugin': 'file:./projects/eslint-plugin.tgz'
   '@rush-temp/event-system': 'file:./projects/event-system.tgz'
@@ -12453,6 +12517,7 @@ specifiers:
   '@typescript-eslint/parser': ~2.6.1
   ajv: ^6.9.1
   autoprefixer: ~9.7.1
+  axios: ~0.19.0
   babel-eslint: ~10.0.3
   babel-loader: ~8.0.6
   babel-plugin-emotion: ~10.0.23
@@ -12471,14 +12536,17 @@ specifiers:
   eslint-plugin-react: ^7.16.0
   eslint-plugin-react-hooks: ^2.2.0
   event-store-client: ^1.1.0
+  execa: ~3.4.0
   faker: ~4.1.0
   fibers: ~4.0.2
+  graphql-request: ~1.8.2
   html-webpack-plugin: ~3.2.0
   immer: ^5.0.0
   intersection-observer: ~0.7.0
   jest: ^24.9.0
   jest-standard-reporter: ^1.0.2
   lodash.isequal: ^4.5.0
+  moxios: ~0.4.0
   node-sass: ~4.13.0
   passport: ^0.4.0
   passport-jwt: ^4.0.0
