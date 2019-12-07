@@ -1,0 +1,50 @@
+{
+  "name": "@geeks-log/docker-publisher",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --reporters=jest-standard-reporter",
+    "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'",
+    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.build.json && tsc -p tsconfig.esm.json"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "test/",
+    "testRegex": ".test.ts$",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setups.ts"
+    ],
+    "moduleDirectories": [
+      "node_modules/",
+      "src/"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "globals": {
+      "ts-jest": {
+        "packageJson": "package.json",
+        "tsConfig": "tsconfig.spec.json"
+      }
+    }
+  },
+  "dependencies": {
+    "graphql-request": "~1.8.2"
+  },
+  "devDependencies": {
+    "@geeks-log/eslint": "0.0.1",
+    "@geeks-log/typescript": "0.0.0",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^10.17.5",
+    "dotenv": "^8.2.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "~3.7.2"
+  }
+}

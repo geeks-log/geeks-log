@@ -1,0 +1,9 @@
+{
+  "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig-node.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "types": ["node", "jest"],
+    "skipLibCheck": true
+  },
+  "include": ["src/", "test/"]
+}
