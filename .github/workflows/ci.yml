@@ -24,3 +24,5 @@ jobs:
       - name: Test
         run: |
           node common/scripts/install-run-rush.js test
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
