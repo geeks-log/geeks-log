@@ -15,7 +15,6 @@ function createDeployTask(packageName, projectFolder) {
         ROOT_PATH: process.cwd(),
       },
     });
-    let hasError = false;
 
     console.log(`[${packageName}] Start deploy`);
 
@@ -24,12 +23,11 @@ function createDeployTask(packageName, projectFolder) {
     });
 
     task.stderr.on('data', data => {
-      hasError = true;
       console.warn(`[${packageName}] ${data.toString('utf8')}`);
     });
 
     task.on('close', code => {
-      if (code !== 0 || hasError) {
+      if (code !== 0) {
         reject();
       } else {
         resolve();
@@ -57,7 +55,6 @@ async function deploy() {
   }
 }
 
-deploy().catch(error => {
-  console.error(error);
+deploy().catch(() => {
   process.exit(1);
 });
