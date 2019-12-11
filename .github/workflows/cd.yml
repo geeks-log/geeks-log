@@ -29,13 +29,13 @@ jobs:
       - name: Building
         run: |
           node common/scripts/install-run-rush.js rebuild
-      - name: Version Bump
+      - name: Libraries (Bump version)
         run: |
           node common/scripts/install-run-rush.js version \
           --target-branch master \
           --version-policy default \
           --bump
-      - name: Publish
+      - name: Libraries (Publish)
         run: |
           npm set //npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}
           npm config set @geeks-log:registry https://npm.pkg.github.com
@@ -45,6 +45,16 @@ jobs:
           --target-branch master \
           --include-all \
           --add-commit-details \
+          --version-policy default \
           --set-access-level public
         env:
           FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+      - name: Services (Bump version)
+          node common/scripts/install-run-rush.js version \
+          --target-branch master \
+          --version-policy production \
+          --bump
+      - name: Services (Deploy)
+        run: |
+          docker -u seokju-na -p ${{secrets.GITHUB_TOKEN}}
+          node common/scripts/install-run-rush.js deploy
