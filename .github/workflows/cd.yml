@@ -51,10 +51,10 @@ jobs:
           FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
       - name: Services (Bump version)
         run: |
-        node common/scripts/install-run-rush.js version \
-          --target-branch master \
-          --version-policy production \
-          --bump
+          node common/scripts/install-run-rush.js version \
+            --target-branch master \
+            --version-policy production \
+            --bump
       - name: Services (Deploy)
         run: |
           docker -u seokju-na -p ${{secrets.GITHUB_TOKEN}}
