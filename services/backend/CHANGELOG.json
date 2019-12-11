@@ -1,0 +1,17 @@
+{
+  "name": "@geeks-log/backend",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@geeks-log/backend_v0.1.0",
+      "date": "Wed, 11 Dec 2019 12:08:41 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add health check"
+          }
+        ]
+      }
+    }
+  ]
+}
