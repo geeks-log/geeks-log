@@ -2,3 +2,5 @@
 .github/
 common/temp/
 **/node_modules/
+dist/
+esm/
