@@ -1,19 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
-const { readdirSync, statSync } = require('fs');
 const nodeExternals = require('webpack-node-externals');
 
 const { HotModuleReplacementPlugin, WatchIgnorePlugin } = webpack;
-
-const SRC_DIR = path.resolve(__dirname, 'src/');
-const sourceDirs = readdirSync(SRC_DIR).filter(pathname =>
-  statSync(path.resolve(SRC_DIR, pathname)).isDirectory(),
-);
-
-const resolveAlias = sourceDirs.reduce((alias, dir) => {
-  alias[dir] = path.resolve(SRC_DIR, dir);
-  return alias;
-}, {});
 
 module.exports = {
   entry: ['webpack/hot/poll?100', './src/main.ts'],
@@ -36,11 +25,14 @@ module.exports = {
   mode: 'development',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    alias: resolveAlias,
+    alias: {
+      '~': path.resolve(__dirname, 'src/'),
+    },
   },
+  stats: 'minimal',
   plugins: [new HotModuleReplacementPlugin(), new WatchIgnorePlugin([/\.js$/, /\.d\.ts$/])],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dev-dist'),
     filename: 'dev.js',
   },
 };

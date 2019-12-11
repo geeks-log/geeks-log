@@ -1,3 +1,0 @@
-@Controller()
-export class UserController {
-}
