@@ -40,7 +40,7 @@ export function spawnAsync(command: string, args: ReadonlyArray<string>, options
       hasStderr = true;
     });
 
-    task.on('end', code => {
+    task.on('close', code => {
       if (code !== 0) {
         reject(new Error(`Error code: ${code}`));
       } else if (hasStderr && options?.failIfStderr) {
