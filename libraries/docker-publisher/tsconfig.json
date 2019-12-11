@@ -1,8 +1,10 @@
 {
-  "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig-node.json",
+  "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
+    "target": "es2017",
     "sourceRoot": "src/",
+    "declaration": true,
     "skipLibCheck": true
   }
 }

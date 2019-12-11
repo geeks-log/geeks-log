@@ -25,6 +25,7 @@ interface BuildDockerImageOptions {
     cwd?: string;
     silent?: boolean;
     failIfStderr?: boolean;
+    stdin?: Buffer;
   };
 }
 
@@ -40,6 +41,12 @@ export class DockerPublisher {
   private readonly packageScope: string;
   private readonly repository: { owner: string; name: string };
   private readonly client: GithubRegistryHttpClient;
+  private readonly credentials: Readonly<{
+    username: string;
+    token: string;
+  }>;
+
+  private _isDockerAuthorized = false;
 
   constructor(options: ConstructOptions) {
     this.packageScope = options.packageScope;
@@ -47,10 +54,19 @@ export class DockerPublisher {
     this.client = new GithubRegistryHttpClient({
       authToken: options.credentials.token,
     });
+    this.credentials = options.credentials;
+  }
+
+  async authorize() {
+    await this.checkForDockerAuthentication();
   }
 
   async buildDockerImage(packageName: string, version: string, options?: BuildDockerImageOptions) {
+    await this.checkForDockerAuthentication();
+
     const tag = this.createDockerImageTag(packageName, version);
+
+    console.log(`Build docker image: ${tag}`);
 
     await spawnAsync(
       'docker',
@@ -68,7 +84,11 @@ export class DockerPublisher {
   }
 
   async pushDockerImage(packageName: string, version: string, options?: PushDockerImageOptions) {
+    await this.checkForDockerAuthentication();
+
     const tag = this.createDockerImageTag(packageName, version);
+
+    console.log(`Push docker image: ${tag}`);
 
     await spawnAsync('docker', ['push', tag], options?.spawnOptions);
   }
@@ -130,5 +150,20 @@ export class DockerPublisher {
     }
 
     return args;
+  }
+
+  private async checkForDockerAuthentication() {
+    if (this._isDockerAuthorized) {
+      return;
+    }
+
+    await spawnAsync(
+      'docker',
+      ['login', 'docker.pkg.github.com', '-u', this.credentials.username, '--password-stdin'],
+      {
+        stdin: Buffer.from(this.credentials.token),
+      },
+    );
+    this._isDockerAuthorized = true;
   }
 }

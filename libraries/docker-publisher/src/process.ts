@@ -9,6 +9,9 @@ interface SpawnOptions {
   };
   /** @default false */
   failIfStderr?: boolean;
+  stdin?: Buffer;
+  /** @default 'utf8' */
+  stdinEncoding?: string;
 }
 
 export function spawnAsync(command: string, args: ReadonlyArray<string>, options?: SpawnOptions) {
@@ -17,8 +20,12 @@ export function spawnAsync(command: string, args: ReadonlyArray<string>, options
     const task = spawn(command, args, {
       cwd: options?.cwd,
       env: options?.env,
-      stdio: ['pipe', 'pipe', 'pipe', 'pipe'],
     });
+
+    if (options?.stdin != null) {
+      task.stdin.write(options.stdin, options.stdinEncoding ?? 'utf8');
+      task.stdin.end();
+    }
 
     task.stdout.on('data', data => {
       if (!options?.silent) {
