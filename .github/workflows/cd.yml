@@ -50,7 +50,8 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
       - name: Services (Bump version)
-          node common/scripts/install-run-rush.js version \
+        run: |
+        node common/scripts/install-run-rush.js version \
           --target-branch master \
           --version-policy production \
           --bump
