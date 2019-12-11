@@ -1,0 +1,63 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const fs = require('fs');
+const { spawn } = require('child_process');
+
+function createDeployTask(packageName, projectFolder) {
+  const projectPath = path.resolve(process.cwd(), projectFolder);
+
+  return new Promise((resolve, reject) => {
+    const task = spawn('npm', ['run', 'deploy'], {
+      cwd: projectPath,
+      env: {
+        ...process.env,
+        ROOT_PATH: process.cwd(),
+      },
+    });
+    let hasError = false;
+
+    console.log(`[${packageName}] Start deploy`);
+
+    task.stdout.on('data', data => {
+      console.log(`[${packageName}] ${data.toString('utf8')}`);
+    });
+
+    task.stderr.on('data', data => {
+      hasError = true;
+      console.warn(`[${packageName}] ${data.toString('utf8')}`);
+    });
+
+    task.on('close', code => {
+      if (code !== 0 || hasError) {
+        reject();
+      } else {
+        resolve();
+      }
+    });
+  });
+}
+
+function readRushConfig() {
+  const rawData = fs.readFileSync(path.resolve(process.cwd(), 'rush.json'), 'utf8');
+  return JSON.parse(rawData);
+}
+
+async function deploy() {
+  const config = readRushConfig();
+  const projects = config.projects.filter(p => p.reviewCategory === 'production');
+
+  if (projects.length === 0) {
+    console.log('Nothing to deploy.');
+    return;
+  }
+
+  for (const project of projects) {
+    await createDeployTask(project.packageName, project.projectFolder);
+  }
+}
+
+deploy().catch(error => {
+  console.error(error);
+  process.exit(1);
+});
