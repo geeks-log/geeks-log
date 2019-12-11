@@ -3,13 +3,43 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "",
-    "lint": "",
-    "test": ""
+    "dev": "webpack",
+    "dev:start": "node dev-dist/dev.js",
+    "build": "rm -rf dist/ && tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.ts'",
+    "test": "jest --reporters=jest-standard-reporter --passWithNoTests",
+    "deploy": "npx ts-node scripts/deploy.ts"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src/",
+    "testRegex": ".spec.ts$",
+    "moduleDirectories": [
+      "node_modules/",
+      "src/"
+    ],
+    "moduleNameMapper": {
+      "~/(.*)$": "<rootDir>/$1"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "globals": {
+      "ts-jest": {
+        "packageJson": "package.json",
+        "tsConfig": "tsconfig.spec.json"
+      }
+    }
   },
   "dependencies": {
     "@geeks-log/event-system": "1.0.2",
     "@geeks-log/note-diff": "0.0.0",
+    "@hapi/joi": "~16.1.8",
     "@nestjs/common": "^6.9.0",
     "@nestjs/core": "^6.9.0",
     "@nestjs/jwt": "^6.1.1",
@@ -26,40 +56,21 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
+    "@geeks-log/docker-publisher": "0.0.0",
     "@geeks-log/eslint": "0.0.1",
     "@geeks-log/typescript": "0.0.0",
     "@nestjs/testing": "^6.9.0",
     "@types/express": "^4.17.2",
+    "@types/hapi__joi": "~16.0.4",
     "@types/node": "^10.17.5",
     "@types/passport": "^1.0.1",
     "@types/passport-jwt": "^3.0.3",
     "@types/uuid": "^3.4.6",
     "ajv": "^6.9.1",
+    "ts-loader": "~6.2.1",
     "typescript": "~3.7.2",
     "webpack": "~4.41.2",
     "webpack-cli": "~3.3.10",
     "webpack-node-externals": "^1.7.2"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": "src/",
-    "testRegex": ".spec.ts$",
-    "moduleDirectories": [
-      "node_modules/",
-      "src/"
-    ],
-    "coverageDirectory": "../coverage",
-    "testEnvironment": "node",
-    "globals": {
-      "ts-jest": {
-        "packageJson": "package.json",
-        "tsConfig": "tsconfig.spec.json"
-      }
-    }
   }
 }

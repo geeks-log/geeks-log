@@ -11,8 +11,9 @@ export interface UserState {
 }
 
 export const userReducer = createReducer<UserState, Event>(
-  undefined,
-  on(localUserCreatedEvent, (state, event) => {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  undefined!,
+  on(localUserCreatedEvent, (_, event) => {
     const { id, email, username, timestamp } = event;
 
     return {

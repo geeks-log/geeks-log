@@ -1,4 +1,4 @@
-import { NoteSnippet } from '@geeks-log/note';
+import { NoteSnippet } from '@geeks-log/note-diff';
 import { createId } from '../core';
 
 export type NoteId = string;

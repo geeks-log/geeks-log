@@ -1,6 +1,13 @@
 {
   "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig-node.json",
   "compilerOptions": {
-    "baseUrl": "./"
-  }
+    "baseUrl": "./",
+    "preserveSymlinks": true,
+    "skipLibCheck": true,
+    "paths": {
+      "~*": ["src/*"]
+    }
+  },
+  "include": ["src/"],
+  "exclude": ["src/testing", "**/*.spec.ts"]
 }

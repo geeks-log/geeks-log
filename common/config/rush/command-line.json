@@ -12,6 +12,12 @@
       "name": "test",
       "summary": "Test each projects. (npm run test)",
       "enableParallelism": true
+    },
+    {
+      "commandKind": "global",
+      "name": "deploy",
+      "summary": "Deploy production projects. (e.g. services/)",
+      "shellCommand": "node common/commands/deploy"
     }
   ],
   "parameters": [
