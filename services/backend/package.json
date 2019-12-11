@@ -8,7 +8,7 @@
     "build": "rm -rf dist/ && tsc -p tsconfig.json",
     "start": "node dist/main.js",
     "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.ts'",
-    "test": "jest --reporters=jest-standard-reporter",
+    "test": "jest --reporters=jest-standard-reporter --passWithNoTests",
     "deploy": "npx ts-node scripts/deploy.ts"
   },
   "jest": {
