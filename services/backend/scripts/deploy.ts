@@ -50,6 +50,6 @@ async function deploy() {
 }
 
 deploy().catch(error => {
-  console.error(error);
+  console.error(error?.message ?? 'Unknown error');
   process.exit(1);
 });
