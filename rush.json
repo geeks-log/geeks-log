@@ -29,7 +29,8 @@
       "packageName": "@geeks-log/backend",
       "projectFolder": "services/backend",
       "reviewCategory": "production",
-      "shouldPublish": false
+      "versionPolicyName": "production",
+      "shouldPublish": true
     },
     {
       "packageName": "@geeks-log/cdk",
