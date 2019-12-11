@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@geeks-log/backend",
+      "comment": "Add health check",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@geeks-log/backend",
+  "email": "seokju.me@gmail.com"
+}
