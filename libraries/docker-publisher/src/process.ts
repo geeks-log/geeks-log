@@ -10,11 +10,18 @@ interface SpawnOptions {
   /** @default false */
   failIfStderr?: boolean;
   stdin?: Buffer;
+  /** @default process.write */
+  stdout?: NodeJS.WriteStream;
+  /** @default process.stderr */
+  stderr?: NodeJS.WriteStream;
   /** @default 'utf8' */
   stdinEncoding?: string;
 }
 
 export function spawnAsync(command: string, args: ReadonlyArray<string>, options?: SpawnOptions) {
+  const stdout = options?.stdout ?? process.stdout;
+  const stderr = options?.stderr ?? process.stderr;
+
   return new Promise<void>((resolve, reject) => {
     let hasStderr = false;
     const task = spawn(command, args, {
@@ -29,13 +36,13 @@ export function spawnAsync(command: string, args: ReadonlyArray<string>, options
 
     task.stdout.on('data', data => {
       if (!options?.silent) {
-        process.stdout.write(data);
+        stdout.write(data);
       }
     });
 
     task.stderr.on('data', data => {
       if (!options?.silent) {
-        process.stderr.write(data);
+        stderr.write(data);
       }
       hasStderr = true;
     });
