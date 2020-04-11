@@ -1,0 +1,56 @@
+{
+  "name": "@geeks-log/fake-testing",
+  "version": "0.0.0",
+  "description": "Fake testing library for geeks log projects.",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geeks-log/geeks-log.git",
+    "directory": "libraries/fake-testing"
+  },
+  "scripts": {
+    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.build.json && tsc -p tsconfig.esm.json",
+    "lint": "echo \"Skip\"",
+    "test": "tsc --noEmit && jest --reporters=jest-standard-reporter"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "test/",
+    "testRegex": ".spec.ts$",
+    "moduleDirectories": [
+      "node_modules/",
+      "src/"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setups.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "packageJson": "package.json",
+        "tsConfig": "tsconfig.spec.json"
+      }
+    }
+  },
+  "peerDependencies": {
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@geeks-log/jest-custom-matchers": "0.0.0",
+    "@geeks-log/typescript": "0.0.0",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^10.17.5",
+    "jest": "^24.9.0",
+    "rxjs": "~6.5.3",
+    "ts-jest": "^24.1.0",
+    "typescript": "~3.7.2"
+  }
+}
