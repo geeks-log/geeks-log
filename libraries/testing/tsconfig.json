@@ -1,6 +1,7 @@
 {
   "extends": "./node_modules/@geeks-log/typescript/configs/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "lib": ["dom", "es2017"]
   }
 }

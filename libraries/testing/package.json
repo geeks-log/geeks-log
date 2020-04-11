@@ -15,18 +15,16 @@
     "lint": "geeks-log-eslint -c .eslintrc.js '{src,test}/**/*.ts'",
     "test": "npm run lint && tsc --noEmit && jest --reporters=jest-standard-reporter"
   },
-  "dependencies": {
-    "@types/faker": "~4.1.8",
-    "@types/jest": "^24.0.22",
-    "date-fns": "~2.8.1"
-  },
   "peerDependencies": {
-    "faker": "~4.1.0",
-    "jest": "^24.9.0"
+    "@types/faker": "~4.1.8",
+    "faker": "~4.1.0"
   },
   "devDependencies": {
     "@geeks-log/eslint": "0.0.1",
     "@geeks-log/typescript": "0.0.0",
+    "@geeks-log/jest-custom-matchers": "0.0.0",
+    "@types/faker": "~4.1.8",
+    "@types/jest": "^24.0.22",
     "faker": "~4.1.0",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",

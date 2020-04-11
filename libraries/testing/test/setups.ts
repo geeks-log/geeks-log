@@ -1,1 +1,1 @@
-import '../src/jest-setups';
+import '@geeks-log/jest-custom-matchers';

@@ -16,7 +16,6 @@ export interface ModifierKeys {
 
 /**
  * Creates a browser MouseEvent with the specified options.
- * @docs-private
  */
 export function createMouseEvent(type: string, x = 0, y = 0, button = 0) {
   const event = document.createEvent('MouseEvent');
@@ -56,7 +55,6 @@ export function createMouseEvent(type: string, x = 0, y = 0, button = 0) {
 
 /**
  * Creates a browser TouchEvent with the specified pointer coordinates.
- * @docs-private
  */
 export function createTouchEvent(type: string, pageX = 0, pageY = 0) {
   // In favor of creating events that work for most of the browsers, the event is created
@@ -81,7 +79,6 @@ export function createTouchEvent(type: string, pageX = 0, pageY = 0) {
 
 /**
  * Dispatches a keydown event from an element.
- * @docs-private
  */
 export function createKeyboardEvent(
   type: string,
@@ -157,7 +154,6 @@ export function createKeyboardEvent(
 
 /**
  * Creates a fake event object with any desired event type.
- * @docs-private
  */
 export function createFakeEvent(type: string, canBubble = false, cancelable = true) {
   const event = document.createEvent('Event');
