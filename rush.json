@@ -24,5 +24,12 @@
   "variants": [],
   "telemetryEnabled": false,
   "hotfixChangeEnabled": false,
-  "projects": []
+  "projects": [
+    {
+      "packageName": "@geeks-log/eslint",
+      "projectFolder": "tools/eslint",
+      "reviewCategory": "tools",
+      "shouldPublish": false
+    }
+  ]
 }
