@@ -1,0 +1,10 @@
+{
+  "name": "@geeks-log/ts-config",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "",
+    "lint": "",
+    "test": ""
+  }
+}

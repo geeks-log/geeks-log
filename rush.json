@@ -30,6 +30,12 @@
       "projectFolder": "tools/eslint",
       "reviewCategory": "tools",
       "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/ts-config",
+      "projectFolder": "tools/ts-config",
+      "reviewCategory": "tools",
+      "shouldPublish": false
     }
   ]
 }
