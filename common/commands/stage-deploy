@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const { readApplicationProjects, writeProjectPrevVersion } = require('./projects');
+
+async function stageDeploy() {
+  const projects = await readApplicationProjects();
+
+  for (const project of projects) {
+    const version = await writeProjectPrevVersion(project);
+    console.log(`[stage-deploy][${project.packageName}] Write previous version (${version})`);
+  }
+}
+
+stageDeploy().catch(error => {
+  console.error(error);
+  process.exit(1);
+});

@@ -1,0 +1,83 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { spawnAsync } = require('./util');
+const { readProjectVersion, readPrevProjectVersion, readApplicationProjects } = require('./projects');
+
+async function createDeployTask(project) {
+  const { packageName, projectFolder } = project;
+
+  await spawnAsync('npm', ['run', 'deploy'], {
+    cwd: path.resolve(process.cwd(), projectFolder),
+    env: {
+      ROOT_PATH: process.cwd()
+    },
+    onStdout(data) {
+      console.log(`[deploy][${packageName}] ${data.toString('utf8')}`);
+    },
+    onStderr(data) {
+      console.warn(`[deploy][${packageName}] ${data.toString('utf8')}`);
+    }
+  });
+}
+
+async function readAllPrevProjectsVersion(projects) {
+  const versions = {};
+
+  for (const project of projects) {
+    versions[project.packageName] = await readPrevProjectVersion(project);
+  }
+
+  return versions;
+}
+
+async function readNextProjectsVersion(projects) {
+  const versions = {};
+
+  for (const project of projects) {
+    versions[project.packageName] = await readProjectVersion(project);
+  }
+
+  return versions;
+}
+
+async function deploy() {
+  const projects = await readApplicationProjects();
+
+  const prevVersions = await readAllPrevProjectsVersion(projects);
+  const nextVersions = await readNextProjectsVersion(projects);
+
+  const projectsToDeploy = projects.filter(project => {
+    const prevVersion = prevVersions[project.packageName];
+    const nextVersion = nextVersions[project.packageName];
+
+    return prevVersion !== nextVersion;
+  });
+
+  if (projectsToDeploy.length === 0) {
+    console.log('[deploy] Nothing to deploy.');
+    return;
+  }
+
+  let hasError = false;
+
+  for (const project of projectsToDeploy) {
+    const prevVersion = prevVersions[project.packageName];
+    const nextVersion = nextVersions[project.packageName];
+
+    console.log(`[deploy][${project.packageName}] ${prevVersion} -> ${nextVersion}`);
+    try {
+      await createDeployTask(project);
+    } catch (error) {
+      hasError = true;
+    }
+  }
+
+  return hasError;
+}
+
+deploy().then(errorCaught => {
+  if (errorCaught) {
+    process.exit(1);
+  }
+});
