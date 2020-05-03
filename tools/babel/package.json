@@ -1,0 +1,27 @@
+{
+  "name": "@geeks-log/babel",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "",
+    "lint": "",
+    "test": "cd test/ && babel fixture.ts --out-file fixture.js --quiet"
+  },
+  "dependencies": {
+    "@babel/core": "~7.9.6",
+    "@babel/plugin-proposal-class-properties": "~7.8.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "~7.8.3",
+    "@babel/plugin-proposal-numeric-separator": "~7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "~7.9.0",
+    "@babel/preset-env": "~7.9.6",
+    "@babel/preset-react": "~7.9.4",
+    "@babel/preset-typescript": "~7.9.0",
+    "@emotion/babel-preset-css-prop": "~10.0.27",
+    "babel-plugin-emotion": "~10.0.33"
+  },
+  "devDependencies": {
+    "@babel/cli": "~7.8.4",
+    "typescript": "~3.8.3"
+  }
+}
