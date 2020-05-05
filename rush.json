@@ -26,6 +26,13 @@
   "hotfixChangeEnabled": false,
   "projects": [
     {
+      "packageName": "@geeks-log/infra",
+      "projectFolder": "infra/",
+      "reviewCategory": "infrastructure",
+      "versionPolicyName": "production",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@geeks-log/eslint",
       "projectFolder": "tools/eslint",
       "reviewCategory": "tools",
@@ -34,6 +41,12 @@
     {
       "packageName": "@geeks-log/ts-config",
       "projectFolder": "tools/ts-config",
+      "reviewCategory": "tools",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/babel",
+      "projectFolder": "tools/babel",
       "reviewCategory": "tools",
       "shouldPublish": false
     }
