@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "",
-    "deploy": "ts-node terraform/cli.ts deploy",
+    "deploy": "ts-node terraform/cli.ts init && ts-node terraform/cli.ts deploy",
     "lint": "",
     "init": "",
     "test": "ts-node terraform/cli.ts init && ts-node terraform/cli.ts test"
