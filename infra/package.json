@@ -1,0 +1,23 @@
+{
+  "name": "@geeks-log/infra",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "",
+    "deploy": "ts-node terraform/cli.ts deploy",
+    "lint": "",
+    "init": "",
+    "test": "ts-node terraform/cli.ts init && ts-node terraform/cli.ts test"
+  },
+  "dependencies": {
+    "dotenv": "~8.2.0",
+    "aws-lambda": "~1.0.6",
+    "ts-node": "~8.10.1",
+    "@types/node": "~13.13.4"
+  },
+  "devDependencies": {
+    "@geeks-log/eslint": "0.0.0",
+    "@geeks-log/ts-config": "0.0.0",
+    "typescript": "~3.8.3"
+  }
+}
