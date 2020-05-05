@@ -1,0 +1,30 @@
+name: Builds
+on: [pull_request]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node v10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Checking for missing change logs
+        run: |
+          set -e
+          git remote set-url origin https://seokju-na:${{secrets.GITHUB_AUTH_TOKEN}}@github.com/geeks-log/geeks-log
+          git fetch origin master:refs/remotes/origin/master -a
+          node common/scripts/install-run-rush.js change -v
+      - name: Installing
+        run: |
+          node common/scripts/install-run-rush.js install
+      - name: Building
+        run: |
+          node common/scripts/install-run-rush.js rebuild
+      - name: Test
+        run: |
+          node common/scripts/install-run-rush.js test
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          TF_TOKEN: ${{secrets.TF_TOKEN}}
