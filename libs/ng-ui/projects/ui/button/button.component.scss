@@ -1,0 +1,14 @@
+@import '../style/button-common';
+
+.Button {
+  @include button-reset();
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+}

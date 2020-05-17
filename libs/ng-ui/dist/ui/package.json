@@ -1,0 +1,20 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "peerDependencies": {
+    "@angular/cdk": "~9.2.3",
+    "@angular/common": "~9.1.7",
+    "@angular/core": "~9.1.7",
+    "tslib": "^1.10.0"
+  },
+  "main": "bundles/ui.umd.js",
+  "module": "fesm5/ui.js",
+  "es2015": "fesm2015/ui.js",
+  "esm5": "esm5/ui.js",
+  "esm2015": "esm2015/ui.js",
+  "fesm5": "fesm5/ui.js",
+  "fesm2015": "fesm2015/ui.js",
+  "typings": "ui.d.ts",
+  "metadata": "ui.metadata.json",
+  "sideEffects": false
+}
