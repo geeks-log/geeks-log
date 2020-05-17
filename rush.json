@@ -33,6 +33,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@geeks-log/ng-ui",
+      "projectFolder": "libs/ng-ui",
+      "reviewCategory": "libraries",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@geeks-log/eslint",
       "projectFolder": "tools/eslint",
       "reviewCategory": "tools",

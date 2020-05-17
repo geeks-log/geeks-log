@@ -25,8 +25,8 @@
      * instead of the latest version.
      */
     // "some-library": "1.2.3"
+    "@angular/cdk": "~9.2.3"
   },
-
   /**
    * When set to true, for all projects in the repo, all dependencies will be automatically added as preferredVersions,
    * except in cases where different projects specify different version ranges for a given dependency.  For older
