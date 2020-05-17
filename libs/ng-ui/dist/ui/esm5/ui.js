@@ -1,6 +1,0 @@
-/**
- * Generated bundle index. Do not edit.
- */
-export * from './public-api';
-export { ButtonBase as ɵa } from './button/button-base';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidWkuanMiLCJzb3VyY2VSb290Ijoibmc6Ly91aS8iLCJzb3VyY2VzIjpbInVpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyxjQUFjLENBQUM7QUFFN0IsT0FBTyxFQUFDLFVBQVUsSUFBSSxFQUFFLEVBQUMsTUFBTSxzQkFBc0IsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogR2VuZXJhdGVkIGJ1bmRsZSBpbmRleC4gRG8gbm90IGVkaXQuXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9wdWJsaWMtYXBpJztcblxuZXhwb3J0IHtCdXR0b25CYXNlIGFzIMm1YX0gZnJvbSAnLi9idXR0b24vYnV0dG9uLWJhc2UnOyJdfQ==
