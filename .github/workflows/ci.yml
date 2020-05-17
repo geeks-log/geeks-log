@@ -22,6 +22,9 @@ jobs:
       - name: Building
         run: |
           node common/scripts/install-run-rush.js rebuild
+      - name: Lint
+        run: |
+          node common/scripts/install-run-rush.js lint
       - name: Test
         run: |
           node common/scripts/install-run-rush.js test
