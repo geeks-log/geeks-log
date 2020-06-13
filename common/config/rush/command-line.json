@@ -17,13 +17,13 @@
       "commandKind": "global",
       "name": "stage-deploy",
       "summary": "Stage deploy",
-      "shellCommand": "node common/commands/stage-deploy"
+      "shellCommand": "npx ts-node-script commands/stage-deploy.ts"
     },
     {
       "commandKind": "global",
       "name": "deploy",
       "summary": "Deploy each productions. (npm run deploy)",
-      "shellCommand": "node common/commands/deploy"
+      "shellCommand": "npx ts-node-script commands/deploy.ts"
     }
   ],
   "parameters": [

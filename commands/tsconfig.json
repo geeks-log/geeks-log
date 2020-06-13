@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "../tools/ts-config/configs/tsconfig-node.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "typeRoots": ["../common/temp/node_modules/@types"]
+  }
+}
