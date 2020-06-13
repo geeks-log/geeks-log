@@ -26,27 +26,6 @@ const patches = [
     },
     for: ['babel-loader', 'webpack-dev-server', 'html-webpack-plugin'],
   },
-  {
-    needed: {
-      name: '@angular/core',
-      version: '~9.1.7',
-    },
-    for: ['@angular/animations', '@angular/cdk', '@angular/forms', '@angular/material', '@angular/platform-browser', '@angular/platform-browser-dynamic', '@angular/router', 'codelyzer', '@angular/common', '@ngneat/spectator', '@angular/flex-layout'],
-  },
-  {
-    needed: {
-      name: '@angular/common',
-      version: '~9.1.7',
-    },
-    for: ['@angular/animations', '@angular/cdk', '@angular/forms', '@angular/material', '@angular/platform-browser', '@angular/platform-browser-dynamic', '@angular/router', '@ngneat/spectator', '@angular/flex-layout'],
-  },
-  {
-    needed: {
-      name: '@angular/cdk',
-      version: '~9.2.3',
-    },
-    for: ['@angular/material']
-  }
 ];
 
 function readPackage(packageJson) {
