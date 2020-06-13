@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@geeks-log/infra",
+      "comment": "Remove unused variable",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@geeks-log/infra",
+  "email": "seokju.me@gmail.com"
+}
