@@ -1,27 +1,29 @@
 {
   "name": "@geeks-log/ng-ui",
   "version": "0.0.0",
-  "main": "dist/ui/bundles/geeks-log-ng-ui.umd.js",
-  "module": "dist/ui/fesm5/geeks-log-ng-ui.js",
-  "es2015": "dist/ui/fesm2015/geeks-log-ng-ui.js",
-  "esm5": "dist/ui/esm5/geeks-log-ng-ui.js",
-  "esm2015": "dist/ui/esm2015/geeks-log-ng-ui.js",
-  "fesm5": "dist/ui/fesm5/geeks-log-ng-ui.js",
-  "fesm2015": "dist/ui/fesm2015/geeks-log-ng-ui.js",
-  "typings": "dist/ui/geeks-log-ng-ui.d.ts",
+  "main": "dist/ui/bundles/ui.umd.js",
+  "module": "dist/ui/fesm5/ui.js",
+  "es2015_ivy_ngcc": "__ivy_ngcc__/dist/ui/fesm2015/ui.js",
+  "es2015": "dist/ui/fesm2015/ui.js",
+  "esm5": "dist/ui/esm5/ui.js",
+  "esm2015": "dist/ui/esm2015/ui.js",
+  "fesm5": "dist/ui/fesm5/ui.js",
+  "fesm2015_ivy_ngcc": "__ivy_ngcc__/dist/ui/fesm2015/ui.js",
+  "fesm2015": "dist/ui/fesm2015/ui.js",
+  "typings": "dist/ui/ui.d.ts",
   "sideEffects": false,
   "scripts": {
     "ng": "ng",
     "dev": "ng serve demo",
     "build": "ng build ui --prod",
     "demo-build": "ng build demo --prod",
-    "test": "ng test ui",
+    "test": "ng test ui --browsers ChromeHeadless --watch=false",
     "lint": "ng lint"
   },
   "private": true,
   "peerDependencies": {
-    "@angular/cdk": "~9.2.2",
-    "@angular/common": "~9.1.4",
+    "@angular/cdk": "~9.2.3",
+    "@angular/common": "~9.1.7",
     "@angular/core": "~9.1.4",
     "tslib": "^1.10.0"
   },
@@ -69,5 +71,10 @@
     "rollup": "~2.10.2",
     "rollup-plugin-postcss": "~3.1.1",
     "autoprefixer": "~9.8.0"
+  },
+  "__processed_by_ivy_ngcc__": {
+    "es2015": "9.1.7",
+    "fesm2015": "9.1.7",
+    "typings": "9.1.7"
   }
 }
