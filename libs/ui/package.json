@@ -1,0 +1,67 @@
+{
+  "name": "@geeks-log/ui",
+  "version": "0.0.0",
+  "description": "UI library for geeks log",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geeks-log/geeks-log.git",
+    "directory": "libs/ui"
+  },
+  "scripts": {
+    "build": "rm -rf dist/ && rm -rf esm/ && tsc -p tsconfig.build.json && tsc -p tsconfig.esm.json",
+    "lint": "geeks-log-eslint -c .eslintrc.js 'src/**/*.{ts,tsx}'",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run lint && npm run typecheck",
+    "storybook:dev": "start-storybook -p 7000"
+  },
+  "peerDependencies": {
+    "react": "~16.13.1",
+    "react-dom": "~16.13.1"
+  },
+  "dependencies": {
+    "reakit": "~1.1.0",
+    "@emotion/core": "~10.0.28",
+    "emotion-theming": "~10.0.27",
+    "@emotion/styled": "~10.0.27",
+    "@emotion/css": "~10.0.27",
+    "@emotion/styled-base": "~10.0.31",
+    "@geeks-log/colors": "0.0.0"
+  },
+  "devDependencies": {
+    "@geeks-log/babel": "0.0.0",
+    "@geeks-log/eslint": "0.0.0",
+    "@geeks-log/ts-config": "0.0.0",
+    "core-js": "~3.6.5",
+    "react": "~16.13.1",
+    "react-dom": "~16.13.1",
+    "typescript": "~3.8.3",
+    "@types/react": "~16.9.36",
+    "@types/react-dom": "~16.9.8",
+    "webpack": "~4.42.0",
+    "webpack-cli": "~3.3.11",
+    "webpack-dev-server": "~3.10.3",
+    "sass": "~1.26.9",
+    "sass-loader": "~8.0.2",
+    "babel-loader": "~8.0.6",
+    "css-loader": "~3.6.0",
+    "style-loader": "~1.2.1",
+    "html-webpack-plugin": "~4.3.0",
+    "react-router-dom": "~5.2.0",
+    "@types/react-router-dom": "~5.1.5",
+    "@storybook/core": "~5.3.19",
+    "@storybook/react": "~5.3.19",
+    "@storybook/preset-typescript": "~3.0.0",
+    "@storybook/addons": "~5.3.19",
+    "regenerator-runtime": "~0.13.5",
+    "@types/node": "~13.13.4",
+    "@storybook/addon-viewport": "~5.3.19",
+    "@storybook/addon-knobs": "~5.3.19",
+    "@storybook/addon-actions": "~5.3.19"
+  }
+}

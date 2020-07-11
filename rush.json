@@ -39,6 +39,12 @@
       "shouldPublish": false
     },
     {
+      "packageName": "@geeks-log/ui",
+      "projectFolder": "libs/ui",
+      "reviewCategory": "library",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@geeks-log/eslint",
       "projectFolder": "tools/eslint",
       "reviewCategory": "tools",
