@@ -14,8 +14,6 @@
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "es2017"
-    ]
+    "lib": ["es2017"]
   }
 }

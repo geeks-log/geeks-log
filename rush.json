@@ -33,9 +33,15 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@geeks-log/ng-ui",
-      "projectFolder": "libs/ng-ui",
-      "reviewCategory": "libraries",
+      "packageName": "@geeks-log/colors",
+      "projectFolder": "libs/colors",
+      "reviewCategory": "library",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@geeks-log/ui",
+      "projectFolder": "libs/ui",
+      "reviewCategory": "library",
       "shouldPublish": false
     },
     {
