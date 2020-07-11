@@ -33,6 +33,12 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@geeks-log/colors",
+      "projectFolder": "libs/colors",
+      "reviewCategory": "library",
+      "shouldPublish": false
+    },
+    {
       "packageName": "@geeks-log/eslint",
       "projectFolder": "tools/eslint",
       "reviewCategory": "tools",
