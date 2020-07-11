@@ -24,7 +24,20 @@ const patches = [
       name: 'webpack',
       version: '^4.0.0',
     },
-    for: ['babel-loader', 'webpack-dev-server', 'html-webpack-plugin'],
+    for: [
+      'babel-loader',
+      'webpack-dev-server',
+      'webpack-dev-middleware',
+      'html-webpack-plugin',
+      'terser-webpack-plugin',
+    ],
+  },
+  {
+    needed: {
+      name: 'ajv',
+      version: '^6.9.1',
+    },
+    for: ['webpack', 'ajv-keywords', 'ajv-errors'],
   },
 ];
 
